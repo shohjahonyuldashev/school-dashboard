@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* index.css или tailwind.css */
+@layer utilities {
+  /* Slide-up + fade-in при загрузке */
+  .animate-slide-up-fade {
+    animation: slide-up-fade 0.6s ease forwards;
+  }
+
+  @keyframes slide-up-fade {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hover эффект с ::before и ::after */
+  .card-hover {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .card-hover::before,
+  .card-hover::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -110%;
+    background: rgba(155, 153, 237, 0.1);
+    transform: rotate(25deg);
+    transition: all 0.5s ease;
+    z-index: 0;
+  }
+
+  .card-hover::after {
+    left: 110%;
+    background: rgba(155, 153, 237, 0.15);
+  }
+
+  .card-hover:hover::before {
+    left: -10%;
+  }
+
+  .card-hover:hover::after {
+    left: 10%;
+  }
+
+  .card-hover-content {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/* Добавь это в CSS файл или в блок <style> */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes lineGrow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 150px;
+    opacity: 1;
+  }
+}
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #3b82f6; /* Курсор */
+  animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
+}
+
+.animate-line {
+  animation: lineGrow 2s ease-out forwards;
+}
