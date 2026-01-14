@@ -431,7 +431,6 @@ const Students = () => {
             ))}
           </div>
         </section>
-        
         {/* motivate */}
         <section className="py-16 px-6 bg-black">
           <h2 className="text-2xl font-bold text-white mb-12 text-center uppercase tracking-wider">

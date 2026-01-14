@@ -391,7 +391,7 @@ const Home = () => {
             ></iframe>
 
             {/* Стеклянная накладка для стиля, когда мышь не на карте */}
-            <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-[40px]"></div>
+            <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-2xl sm:rounded-3xl md:rounded-[40px]"></div>
           </div>
         </div>
       </section>
