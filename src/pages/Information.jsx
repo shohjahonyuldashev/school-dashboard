@@ -15,13 +15,13 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
+// Оставляем только один импорт здесь
+import { useTranslation } from "react-i18next";
 // Импорты ваших ресурсов
-import Family from "../img/family.jpg";
-import Item from "../img/item.webp";
+
 import Doctor from "../image/doctor.avif";
 import Lib from "../image/lib.webp";
 import Field from "../image/field.jpeg";
-
 import SchoolPerformanceDashboard from "../components/Chart/SchoolPerformanceDashboard";
 import Footer from "../components/footer/Footer";
 
@@ -48,11 +48,13 @@ const AnimatedNumber = ({ value }) => {
 };
 
 const Information = () => {
+  const { t } = useTranslation();
+
   const facts = [
-    { number: "850+ 👨‍🎓", label: "Students" },
-    { number: "120+ 👩‍🏫", label: "Qualified Teachers" },
-    { number: "45+ 🌍", label: "Countries" },
-    { number: "15:1 ✨", label: "Teacher Ratio" },
+    { number: "850+ 👨‍🎓", label: t("info.facts.students") },
+    { number: "120+ 👩‍🏫", label: t("info.facts.teachers") },
+    { number: "45+ 🌍", label: t("info.facts.countries") },
+    { number: "15:1 ✨", label: t("info.facts.ratio") },
   ];
 
   return (
@@ -72,7 +74,7 @@ const Information = () => {
             className="inline-block px-4 py-1.5 mb-6 border border-white/10 rounded-full bg-white/5 backdrop-blur-md"
           >
             <span className="text-xs font-mono uppercase tracking-[0.3em] text-gray-400">
-              Institutional Excellence
+              {t("info.hero.badge")}
             </span>
           </motion.div>
 
@@ -82,7 +84,9 @@ const Information = () => {
             className="text-6xl md:text-9xl font-black uppercase tracking-tighter mb-8 leading-[0.85]"
           >
             School <br />{" "}
-            <span className="text-[#6E71BD] italic">Information</span>
+            <span className="text-[#6E71BD] italic">
+              {t("info.hero.title")}{" "}
+            </span>
           </motion.h1>
 
           <motion.p
@@ -91,8 +95,7 @@ const Information = () => {
             transition={{ delay: 0.4 }}
             className="max-w-2xl mx-auto text-gray-500 text-lg md:text-xl font-medium"
           >
-            Everything you need to know about Uzbekistan International School's
-            ecosystem.
+            {t("info.hero.subtitle")}
           </motion.p>
         </div>
       </section>
@@ -132,7 +135,8 @@ const Information = () => {
           >
             <div>
               <h2 className="text-4xl font-black uppercase tracking-tighter mb-10">
-                Contact <span className="text-[#6E71BD]">Hub</span>
+                {t("info.contact.title")}{" "}
+                <span className="text-[#6E71BD]">{t("info.contact.hub")}</span>
               </h2>
               <div className="space-y-8">
                 <div className="flex items-start gap-6">
@@ -141,9 +145,9 @@ const Information = () => {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-gray-600 mb-1">
-                      Direct Line
+                      {t("info.contact.direct")}
                     </p>
-                    <p className="text-xl font-bold">+998 71 123 45 67</p>
+                    <p className="text-xl font-bold">+998 91 286 14 78</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-6">
@@ -152,7 +156,7 @@ const Information = () => {
                   </div>
                   <div>
                     <p className="text-xs uppercase tracking-widest text-gray-600 mb-1">
-                      Support
+                      {t("info.contact.support")}
                     </p>
                     <p className="text-xl font-bold">info@uis.uz</p>
                   </div>
@@ -160,7 +164,9 @@ const Information = () => {
               </div>
             </div>
             <div className="mt-16 pt-8 border-t border-white/5 flex justify-between items-center">
-              <span className="text-gray-500">Available 24/7 for parents</span>
+              <span className="text-gray-500">
+                {t("info.contact.availability")}
+              </span>
               <ArrowUpRight className="text-gray-700" />
             </div>
           </motion.div>
@@ -174,15 +180,19 @@ const Information = () => {
           >
             <div className="flex justify-between items-start mb-16">
               <h2 className="text-4xl font-black uppercase leading-none tracking-tighter">
-                Campus <br /> Hours
+                {t("info.campus.hours")} <br /> {t("info.campus.operation")}
               </h2>
               <Clock size={40} strokeWidth={3} />
             </div>
             <div className="space-y-6">
               {[
-                { day: "Mon - Fri", time: "08:00 - 15:30" },
-                { day: "Saturday", time: "09:00 - 13:00" },
-                { day: "Sunday", time: "Closed", color: "black" },
+                { day: t("info.campus.days.weekdays"), time: "08:00 - 15:30" },
+                { day: t("info.campus.days.saturday"), time: "09:00 - 13:00" },
+                {
+                  day: t("info.campus.days.sunday"),
+                  time: t("info.campus.days.closed"),
+                  color: "black",
+                },
               ].map((h, i) => (
                 <div
                   key={i}
@@ -210,19 +220,31 @@ const Information = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none">
-              Our <br /> <span className="text-gray-800">Space</span>
+              {t("info.space.title")} <br />
+              <span className="text-gray-800">{t("info.space.subtitle")}</span>
             </h2>
             <p className="max-w-xs text-gray-500 text-sm">
-              World-class infrastructure designed for the next generation of
-              global leaders.
+              {t("info.space.desc")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: Doctor, title: "Labs", tag: "Science" },
-              { img: Lib, title: "Library", tag: "Knowledge" },
-              { img: Field, title: "Arena", tag: "Sports" },
+              {
+                img: Doctor,
+                title: t("info.space.items.labs"),
+                tag: t("info.space.tags.science"),
+              },
+              {
+                img: Lib,
+                title: t("info.space.items.library"),
+                tag: t("info.space.tags.knowledge"),
+              },
+              {
+                img: Field,
+                title: t("info.space.items.arena"),
+                tag: t("info.space.tags.sports"),
+              },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -259,23 +281,13 @@ const Information = () => {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8">
           {[
             {
-              title: "Academic Path",
-              list: [
-                "International Baccalaureate (IB)",
-                "Cambridge International",
-                "AP Courses",
-                "STEM Excellence",
-              ],
+              title: t("info.programs.academic.title"),
+              list: t("info.programs.academic.list", { returnObjects: true }),
               accent: "#00d2ff",
             },
             {
-              title: "Campus Assets",
-              list: [
-                "Digital Resource Hub",
-                "Olympic Swimming Pool",
-                "Music & Arts Studios",
-                "Medical Center",
-              ],
+              title: t("info.programs.assets.title"),
+              list: t("info.programs.assets.list", { returnObjects: true }),
               accent: "#9c27b0",
             },
           ].map((card, i) => (

@@ -5,102 +5,101 @@ import Cod from "../../image/cod.jpeg";
 import Killer from "../../image/killer.jpg";
 import Advan from "../../image/advanced.jpg";
 import { motion, AnimatePresence } from "framer-motion";
-
-const studentsData = [
-  {
-    id: 1,
-    title: "Гордость Школы",
-    desc: "Наши лучшие ученики и их достижения за этот год.",
-    image: Killer,
-    size: "large",
-    icon: <Trophy size={24} className="text-yellow-400" />,
-    staff: {
-      name: "Александр Сергеевич",
-      role: "Директор школы",
-      avatar: "Д",
-      color: "bg-purple-600",
-      quote: "«Эти ребята — наше будущее и главная ценность!»",
-    },
-  },
-  {
-    id: 2,
-    title: "Олимпиады",
-    desc: "Победители городских и международных этапов.",
-    image: Anime,
-    size: "small",
-    icon: <Award size={24} className="text-blue-400" />,
-    staff: {
-      name: "Елена Викторовна",
-      role: "Завуч по учебной работе",
-      avatar: "Е",
-      color: "bg-blue-600",
-      quote: "«Интеллект и труд — ключ к мировым победам.»",
-    },
-  },
-  {
-    id: 3,
-    title: "Спортсмены",
-    desc: "Команда, которая приносит кубки каждый месяц.",
-    image: Cod,
-    size: "small",
-    icon: <Star size={24} className="text-purple-400" />,
-    staff: {
-      name: "Игорь Петрович",
-      role: "Завуч по спорт-работе",
-      avatar: "И",
-      color: "bg-orange-600",
-      quote: "«В здоровом теле — здоровый дух!»",
-    },
-  },
-  {
-    id: 4,
-    title: "Военные",
-    desc: "Подготовка будущих защитников и дисциплина.",
-    image: Advan,
-    size: "large",
-    icon: <ShieldCheck size={24} className="text-green-400" />, // Заменили иконку на щит
-    staff: {
-      name: "Виктор Николаевич",
-      role: "Военный руководитель",
-      avatar: "В",
-      color: "bg-green-700",
-      quote: "«Дисциплина — это мать любой победы.»",
-    },
-  },
-];
-
-const faqData = [
-  {
-    id: 1,
-    question: "Как попасть в список 'Гордость Школы'?",
-    answer:
-      "Нужно иметь отличные оценки по всем предметам и активно участвовать в жизни школы в течение года.",
-  },
-  {
-    id: 2,
-    question: "Какие киберспортивные дисциплины доступны?",
-    answer:
-      "На данный момент у нас есть секции по Call of Duty, CS2 и аналитике стратегий.",
-  },
-  {
-    id: 3,
-    question: "Нужна ли специальная форма для военных занятий?",
-    answer:
-      "Да, для занятий с Виктором Николаевичем требуется камуфляжная форма, которую выдает школа.",
-  },
-];
-
-
+import { useTranslation } from "react-i18next";
 
 const StudentsSection = () => {
   const [selectedId, setSelectedId] = useState(null);
-  const selectedItem = studentsData.find((s) => s.id === selectedId);
+
   const [activeFaq, setActiveFaq] = useState(null);
+  const { t } = useTranslation();
+
+  const studentsData = [
+    {
+      id: 1,
+      title: t("students_section.cards.pride.title"),
+      desc: t("students_section.cards.pride.desc"),
+      image: Killer,
+      size: "large",
+      icon: <Trophy size={24} className="text-yellow-400" />,
+      staff: {
+        name: t("students_section.cards.pride.staff_name"),
+        role: t("students_section.cards.pride.staff_role"),
+        avatar: "Д", // Можно оставить так или тоже вынести, если в разных языках разные буквы
+        color: "bg-purple-600",
+        quote: t("students_section.cards.pride.staff_quote"),
+      },
+    },
+    {
+      id: 2,
+      title: t("students_section.cards.olympiads.title"),
+      desc: t("students_section.cards.olympiads.desc"),
+      image: Anime,
+      size: "small",
+      icon: <Award size={24} className="text-blue-400" />,
+      staff: {
+        name: t("students_section.cards.olympiads.staff_name"),
+        role: t("students_section.cards.olympiads.staff_role"),
+        avatar: "Е",
+        color: "bg-blue-600",
+        quote: t("students_section.cards.olympiads.staff_quote"),
+      },
+    },
+    {
+      id: 3,
+      title: t("students_section.cards.sports.title"),
+      desc: t("students_section.cards.sports.desc"),
+      image: Cod,
+      size: "small",
+      icon: <Star size={24} className="text-purple-400" />,
+      staff: {
+        name: t("students_section.cards.sports.staff_name"),
+        role: t("students_section.cards.sports.staff_role"),
+        avatar: "И",
+        color: "bg-orange-600",
+        quote: t("students_section.cards.sports.staff_quote"),
+      },
+    },
+    {
+      id: 4,
+      title: t("students_section.cards.military.title"),
+      desc: t("students_section.cards.military.desc"),
+      image: Advan,
+      size: "large",
+      icon: <ShieldCheck size={24} className="text-green-400" />,
+      staff: {
+        name: t("students_section.cards.military.staff_name"),
+        role: t("students_section.cards.military.staff_role"),
+        avatar: "В",
+        color: "bg-green-700",
+        quote: t("students_section.cards.military.staff_quote"),
+      },
+    },
+  ];
+
+  const selectedItem = studentsData.find((s) => s.id === selectedId);
+
+  const faqData = [
+    {
+      id: 1,
+      question: t("students_section.faq.q1"),
+      answer: t("students_section.faq.a1"),
+    },
+    {
+      id: 2,
+      question: t("students_section.faq.q2"),
+      answer: t("students_section.faq.a2"),
+    },
+    {
+      id: 3,
+      question: t("students_section.faq.q3"),
+      answer: t("students_section.faq.a3"),
+    },
+  ];
 
   return (
     <main className="container mx-auto px-4 py-10">
       <h2 className="text-5xl font-bold text-white text-center mt-20 mb-20">
-        Наши Студенты
+        {t("students_section.main_title")}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -197,7 +196,7 @@ const StudentsSection = () => {
       {/* {Question} */}
       <section className="max-w-9xl mx-auto mt-50 mb-20">
         <h2 className="text-6xl font-bold text-white text-center mb-19 uppercase tracking-widest">
-          Частые вопросы
+          {t("students_section.faq_title")}
         </h2>
         <div className="space-y-6">
           {faqData.map((faq) => (
@@ -236,7 +235,6 @@ const StudentsSection = () => {
           ))}
         </div>
       </section>
-
     </main>
   );
 };

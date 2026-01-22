@@ -76,11 +76,13 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:info@academy.com"
+                  href="https://mail.google.com/mail/u/0/#inbox"
                   className="flex flex-col transition-colors hover:text-white"
                 >
                   <span className="text-xs text-gray-500 uppercase">Email</span>
-                  <span className="font-semibold">shohjahon@academy.com</span>
+                  <span className="font-semibold tracking-wide">
+                    shohjahon@academy.com
+                  </span>
                 </a>
               </li>
             </ul>

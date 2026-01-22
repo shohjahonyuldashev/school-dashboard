@@ -4,9 +4,10 @@ import Sky from "../image/sky.avif";
 import CEO from "../image/director.avif";
 import Helper from "../image/helper.jpg";
 import Footer from "../components/footer/Footer.jsx";
-import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const Students = () => {
+  const { t } = useTranslation();
   // const containerVariants = {
   //   hidden: { opacity: 0 },
   //   visible: {
@@ -61,50 +62,51 @@ const Students = () => {
   const schedule = [
     {
       time: "08:30",
-      task: "Сбор и регистрация",
-      desc: "Проверка присутствия и подготовка рабочих мест.",
+      task: t("students_page.schedule.s1.task"),
+      desc: t("students_page.schedule.s1.desc"),
     },
     {
       time: "09:00",
-      task: "Теоретический блок",
-      desc: "Разбор стратегий и анализ прошлых игр.",
+      task: t("students_page.schedule.s2.task"),
+      desc: t("students_page.schedule.s2.desc"),
     },
     {
       time: "11:30",
-      task: "Ланч / Перерыв",
-      desc: "Время для отдыха в специальной зоне питания.",
+      task: t("students_page.schedule.s3.task"),
+      desc: t("students_page.schedule.s3.desc"),
     },
     {
       time: "12:30",
-      task: "Практические занятия",
-      desc: "Тренировки в Blue Zone под руководством менторов.",
+      task: t("students_page.schedule.s4.task"),
+      desc: t("students_page.schedule.s4.desc"),
     },
     {
       time: "16:00",
-      task: "Итоги дня",
-      desc: "Обсуждение результатов и фидбек.",
+      task: t("students_page.schedule.s5.task"),
+      desc: t("students_page.schedule.s5.desc"),
     },
   ];
 
+  // Достижения
   const achievements = [
     {
       id: 1,
-      title: "Night Owl",
-      desc: "Доступ к Blue Zone в вечернее время",
+      title: t("students_page.achievements.a1.title"),
+      desc: t("students_page.achievements.a1.desc"),
       icon: "🦉",
       status: "locked",
     },
     {
       id: 2,
-      title: "Code Master",
-      desc: "0 нарушений Red Zone за месяц",
+      title: t("students_page.achievements.a2.title"),
+      desc: t("students_page.achievements.a2.desc"),
       icon: "🛡️",
       status: "unlocked",
     },
     {
       id: 3,
-      title: "Team Lead",
-      desc: "Помощь 5 новичкам в адаптации",
+      title: t("students_page.achievements.a3.title"),
+      desc: t("students_page.achievements.a3.desc"),
       icon: "👑",
       status: "in-progress",
     },
@@ -122,12 +124,12 @@ const Students = () => {
               Events
             </h2>
             <h2 className="text-4xl md:text-5xl font-bold text-white relative pt-8 pl-4 border-l-4 border-blue-600">
-              Ближайшие события
+              {t("students_page.events_title")}
             </h2>
           </div>
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 w-full">
             {/* Карточка 1 */}
-            <div className="relative group h-[500px] overflow-hidden rounded-3xl bg-zinc-900 shadow-2xl transition-all duration-500 hover:-translate-y-2">
+            <div className="relative group cursor-pointer h-[500px] overflow-hidden rounded-3xl bg-zinc-900 shadow-2xl transition-all duration-500 hover:-translate-y-2">
               <img
                 src={Cyber}
                 className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700"
@@ -139,24 +141,24 @@ const Students = () => {
                   Cyber Arena
                 </span>
                 <h3 className="text-4xl font-bold text-white mb-4 leading-tight">
-                  Турнир «School Masters» <br /> по CS2 и Dota 2
+                  {t("students_page.event1.title")} <br />
+                  {t("students_page.event1.br")}
                 </h3>
                 <p className="text-gray-300 text-lg max-w-md mb-6">
-                  Призовой фонд, профессиональные комментаторы и прямая
-                  трансляция в холле.
+                  {t("students_page.event1.desc")}
                 </p>
                 <div className="flex items-center gap-4 text-white font-mono">
                   <span className="text-2xl">15.01</span>
                   <span className="w-12 h-[1px] bg-white/30"></span>
                   <span className="text-gray-400 uppercase">
-                    Начало в 18:00
+                    {t("students_page.event1.time")}
                   </span>
                 </div>
               </div>
             </div>
 
             {/* Карточка 2 */}
-            <div className="relative group h-[500px] overflow-hidden rounded-3xl bg-zinc-900 shadow-2xl transition-all duration-500 hover:-translate-y-2">
+            <div className="relative cursor-pointer group h-[500px] overflow-hidden rounded-3xl bg-zinc-900 shadow-2xl transition-all duration-500 hover:-translate-y-2">
               <img
                 src={Sky}
                 className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700"
@@ -168,16 +170,18 @@ const Students = () => {
                   Military Day
                 </span>
                 <h3 className="text-4xl font-bold text-white mb-4 leading-tight">
-                  День тактической <br /> подготовки
+                  {t("students_page.event2.title")} <br />{" "}
+                  {t("students_page.event2.br")}
                 </h3>
                 <p className="text-gray-300 text-lg max-w-md mb-6">
-                  Полевой выезд, отработка навыков ориентирования и командная
-                  работа.
+                  {t("students_page.event2.desc")}
                 </p>
                 <div className="flex items-center gap-4 text-white font-mono">
                   <span className="text-2xl">22.01</span>
                   <span className="w-12 h-[1px] bg-white/30"></span>
-                  <span className="text-gray-400 uppercase">Сбор у штаба</span>
+                  <span className="text-gray-400 uppercase">
+                    {t("students_page.event2.location")}
+                  </span>
                 </div>
               </div>
             </div>
@@ -191,7 +195,7 @@ const Students = () => {
                 Student Hub
               </p>
               <h2 className="text-4xl font-bold text-white uppercase tracking-tight">
-                Ресурсы и материалы
+                {t("students_page.resources_title")}
               </h2>
             </div>
             <div className="hidden md:block h-[1px] flex-grow mx-10 bg-gradient-to-r from-blue-600/50 to-transparent"></div>
@@ -201,26 +205,26 @@ const Students = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Электронный журнал",
-                desc: "Оценки и домашние задания",
+                title: t("students_page.resources.journal.title"),
+                desc: t("students_page.resources.journal.desc"),
                 icon: "📝",
                 color: "group-hover:shadow-blue-500/20",
               },
               {
-                title: "Библиотека гайдов",
-                desc: "Учебные пособия и статьи",
+                title: t("students_page.resources.guides.title"),
+                desc: t("students_page.resources.guides.desc"),
                 icon: "📚",
                 color: "group-hover:shadow-purple-500/20",
               },
               {
-                title: "Правила школы",
-                desc: "Устав и внутренний распорядок",
+                title: t("students_page.resources.rules.title"),
+                desc: t("students_page.resources.rules.desc"),
                 icon: "⚖️",
                 color: "group-hover:shadow-red-500/20",
               },
               {
-                title: "Расписание звонков",
-                desc: "Время уроков и перемен",
+                title: t("students_page.resources.timetable.title"),
+                desc: t("students_page.resources.timetable.desc"),
                 icon: "🔔",
                 color: "group-hover:shadow-green-500/20",
               },
@@ -265,7 +269,11 @@ const Students = () => {
             {/* Заголовок */}
             <div className="text-center mb-16">
               <h2 className="text-5xl font-black text-white uppercase tracking-widest">
-                Внутренний <span className="text-blue-600">Кодекс</span>
+                {t("students_page.rules_title_part1")}
+                <span className="text-blue-600">
+                  {" "}
+                  {t("students_page.rules_title_part2")}
+                </span>
               </h2>
               <p className="text-zinc-500 mt-4 font-mono tracking-widest">
                 School 1 Rules & Regulations
@@ -283,31 +291,28 @@ const Students = () => {
                 <div className="space-y-10">
                   <div className="group">
                     <h4 className="text-white text-xl font-bold mb-2 group-hover:text-red-500 transition-colors">
-                      Бег в коридорах
+                      {t("students_page.red_zone.r1.title")}
                     </h4>
                     <p className="text-zinc-400">
-                      Соблюдайте спокойный темп передвижения для общей
-                      безопасности.
+                      {t("students_page.red_zone.r1.desc")}
                     </p>
                   </div>
 
                   <div className="group">
                     <h4 className="text-white text-xl font-bold mb-2 group-hover:text-red-500 transition-colors">
-                      Использование гаджетов
+                      {t("students_page.red_zone.r2.title")}
                     </h4>
                     <p className="text-zinc-400">
-                      Смартфоны должны быть убраны во время академических
-                      занятий.
+                      {t("students_page.red_zone.r2.desc")}
                     </p>
                   </div>
 
                   <div className="group">
                     <h4 className="text-white text-xl font-bold mb-2 group-hover:text-red-500 transition-colors">
-                      Питание в классах
+                      {t("students_page.red_zone.r3.title")}
                     </h4>
                     <p className="text-zinc-400">
-                      Для перекусов используйте только специально отведенные
-                      зоны отдыха.
+                      {t("students_page.red_zone.r3.desc")}
                     </p>
                   </div>
                 </div>
@@ -323,31 +328,28 @@ const Students = () => {
                 <div className="space-y-10">
                   <div className="group">
                     <h4 className="text-white text-xl font-bold mb-2 group-hover:text-blue-500 transition-colors">
-                      Дресс-код
+                      {t("students_page.blue_zone.b1.title")}
                     </h4>
                     <p className="text-zinc-400">
-                      Наличие формы подчеркивает вашу принадлежность к элите
-                      школы.
+                      {t("students_page.blue_zone.b1.desc")}
                     </p>
                   </div>
 
                   <div className="group">
                     <h4 className="text-white text-xl font-bold mb-2 group-hover:text-blue-500 transition-colors">
-                      Командная работа
+                      {t("students_page.blue_zone.b2.title")}
                     </h4>
                     <p className="text-zinc-400">
-                      Помогайте товарищам в учебе и на киберспортивных
-                      тренировках.
+                      {t("students_page.blue_zone.b2.desc")}
                     </p>
                   </div>
 
                   <div className="group">
                     <h4 className="text-white text-xl font-bold mb-2 group-hover:text-blue-500 transition-colors">
-                      Пунктуальность
+                      {t("students_page.blue_zone.b3.title")}
                     </h4>
                     <p className="text-zinc-400">
-                      Приходите за 5 минут до начала — уважайте время
-                      преподавателей.
+                      {t("students_page.blue_zone.b3.desc")}
                     </p>
                   </div>
                 </div>
@@ -358,7 +360,11 @@ const Students = () => {
         {/* Data */}
         <section className="py-12 px-4 bg-black text-white">
           <h2 className="text-3xl font-bold text-center mb-10 uppercase tracking-widest">
-            Распорядок <span className="text-blue-500">дня</span>
+            {t("students_page.daily_routine_title1")}
+            <span className="text-blue-500">
+              {" "}
+              {t("students_page.daily_routine_title2")}
+            </span>
           </h2>
 
           <div className="max-w-4xl mx-auto relative border-l-2 border-blue-600/50 ml-4 md:ml-auto">
@@ -368,7 +374,7 @@ const Students = () => {
                 <div className="absolute -left-[35px] mt-1.5 w-6 h-6 rounded-full bg-black border-4 border-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
 
                 {/* Контент */}
-                <div className="bg-[#111] p-5 rounded-xl border border-gray-800 hover:border-blue-500 transition-colors duration-300 shadow-lg">
+                <div className="bg-[#111] cursor-pointer p-5 rounded-xl border border-gray-800 hover:border-blue-500 transition-colors duration-300 shadow-lg">
                   <span className="text-blue-400 font-mono text-lg font-bold">
                     {item.time}
                   </span>
@@ -387,7 +393,7 @@ const Students = () => {
         <section className="py-16 px-6 bg-black">
           <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
             <span className="w-8 h-[2px] bg-blue-600"></span>
-            СИСТЕМА ДОСТИЖЕНИЙ
+            {t("students_page.awards_title")}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -434,7 +440,8 @@ const Students = () => {
         {/* motivate */}
         <section className="py-16 px-6 bg-black">
           <h2 className="text-2xl font-bold text-white mb-12 text-center uppercase tracking-wider">
-            НАСТАВНИКИ <span className="text-blue-500">// SCHOOL 1</span>
+            {t("students_page.mentors_title")}
+            <span className="text-blue-500">// SCHOOL 1</span>
           </h2>
 
           {/* Карточка 1: Директор (Red Zone) */}
@@ -456,16 +463,19 @@ const Students = () => {
                   #DIRECTOR
                 </span>
                 <h3 className="text-4xl font-black text-white mb-4 uppercase leading-none">
-                  ДИСЦИПЛИНА — <br />{" "}
-                  <span className="text-red-600">ЭТО ПОБЕДА</span>
+                  {t("students_page.mentor_dir.title")}
+                  — <br />{" "}
+                  <span className="text-red-600">
+                    {" "}
+                    {t("students_page.mentor_dir.win")}
+                  </span>
                 </h3>
                 <p className="text-gray-400 italic text-lg mb-6 border-l-2 border-red-600 pl-4">
-                  "Порядок в залах — это порядок в мыслях. Мы строим не просто
-                  школу, а сообщество лидеров."
+                  {t("students_page.mentor_dir.quote")}
                 </p>
                 <div className="text-white font-bold uppercase tracking-widest text-sm">
-                  Иван Иванов <span className="text-gray-600 mx-2">|</span>{" "}
-                  Chief Executive
+                  {t("students_page.mentor_dir.name")}
+                  <span className="text-gray-600 mx-2">|</span> Chief Executive
                 </div>
               </div>
             </div>
@@ -490,16 +500,20 @@ const Students = () => {
                   #ACADEMIC_DEAN
                 </span>
                 <h3 className="text-4xl font-black text-white mb-4 uppercase leading-none">
-                  ИНТЕЛЛЕКТ — <br />{" "}
-                  <span className="text-blue-600">ТВОЕ ОРУЖИЕ</span>
+                  {t("students_page.mentor_dean.title")}
+                  <br />{" "}
+                  <span className="text-blue-600">
+                    {" "}
+                    {t("students_page.mentor_dean.win")}
+                  </span>
                 </h3>
                 <p className="text-gray-400 italic text-lg mb-6 border-r-2 md:border-r-0 md:border-l-2 border-blue-600 pr-4 md:pr-0 md:pl-4">
-                  "В Blue Zone каждый байт информации приближает вас к
-                  доминированию в цифровом мире."
+                  {t("students_page.mentor_dean.quote")}
                 </p>
                 <div className="text-white font-bold uppercase tracking-widest text-sm">
-                  Анна Петрова <span className="text-gray-600 mx-2">|</span>{" "}
-                  Head of Education
+                  {t("students_page.mentor_dean.name")}
+                  <span className="text-gray-600 mx-2">|</span> Head of
+                  Education
                 </div>
               </div>
             </div>

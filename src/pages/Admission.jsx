@@ -25,98 +25,96 @@ import {
   Star,
   Users,
 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Admission = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState("primary");
   const services = [
     {
-      title: "Academic Support",
-      desc: "Tutoring programs, learning support specialists, and personalized plans.",
       icon: <GraduationCap className="text-blue-400" size={32} />,
       color: "from-blue-500/20",
+      title: t("admin.studentSupport.services.0.title"),
+      desc: t("admin.studentSupport.services.0.desc"),
     },
     {
-      title: "Counseling Services",
-      desc: "Professional guidance for academic planning and university preparation.",
       icon: <MessageCircle className="text-purple-400" size={32} />,
       color: "from-purple-500/20",
+      title: t("admin.studentSupport.services.1.title"),
+      desc: t("admin.studentSupport.services.1.desc"),
     },
     {
-      title: "Health & Wellness",
-      desc: "On-campus nurse, wellness programs, and mental health support.",
       icon: <HeartPulse className="text-rose-400" size={32} />,
       color: "from-rose-500/20",
+      title: t("admin.studentSupport.services.2.title"),
+      desc: t("admin.studentSupport.services.2.desc"),
     },
   ];
 
   const steps = [
     {
       step: "01",
-      title: "Application",
-      desc: "Submit your application form and required documents.",
       color: "from-blue-500 to-cyan-400",
+      title: t("admin.admissionProcess.steps.0.title"),
+      desc: t("admin.admissionProcess.steps.0.desc"),
     },
     {
       step: "02",
-      title: "Assessment",
-      desc: "Participate in entrance examinations and interviews.",
       color: "from-purple-500 to-pink-400",
+      title: t("admin.admissionProcess.steps.1.title"),
+      desc: t("admin.admissionProcess.steps.1.desc"),
     },
     {
       step: "03",
-      title: "Review",
-      desc: "Our admissions team reviews your profile.",
       color: "from-amber-500 to-orange-400",
+      title: t("admin.admissionProcess.steps.2.title"),
+      desc: t("admin.admissionProcess.steps.2.desc"),
     },
     {
       step: "04",
-      title: "Acceptance",
-      desc: "Receive your acceptance letter and enrollment details.",
       color: "from-emerald-500 to-teal-400",
+      title: t("admin.admissionProcess.steps.3.title"),
+      desc: t("admin.admissionProcess.steps.3.desc"),
     },
   ];
 
   const dates = [
     {
-      label: "Application Opening",
-      date: "January 15, 2026",
-      status: "Upcoming",
+      label: t("admin.importantDates.events.0.label"),
+      date: t("admin.importantDates.events.0.date"),
+      status: t("admin.importantDates.events.0.status"),
     },
     {
-      label: "Application Deadline",
-      date: "March 31, 2026",
-      status: "Critical",
+      label: t("admin.importantDates.events.1.label"),
+      date: t("admin.importantDates.events.1.date"),
+      status: t("admin.importantDates.events.1.status"),
     },
     {
-      label: "Entrance Examinations",
-      date: "April 12-14, 2026",
-      status: "Scheduled",
+      label: t("admin.importantDates.events.2.label"),
+      date: t("admin.importantDates.events.2.date"),
+      status: t("admin.importantDates.events.2.status"),
     },
-    { label: "Results Declaration", date: "May 15, 2026", status: "Final" },
+    {
+      label: t("admin.importantDates.events.3.label"),
+      date: t("admin.importantDates.events.3.date"),
+      status: t("admin.importantDates.events.3.status"),
+    },
   ];
 
   const criteria = [
     {
-      level: "Elementary Level",
+      level: t("admin.eligibility.elementary.level"),
       icon: <School className="text-blue-400" size={40} />,
       gradient: "from-blue-500/10 to-transparent",
-      items: [
-        "Age 5-6 years for Grade 1",
-        "Basic English and Math proficiency",
-        "Previous school transcript",
-        "Birth certificate and identification",
-      ],
+      items:
+        t("admin.eligibility.elementary.items", { returnObjects: true }) || [],
     },
     {
-      level: "Secondary Level",
+      level: t("admin.eligibility.secondary.level"),
       icon: <GraduationCap className="text-purple-400" size={40} />,
       gradient: "from-purple-500/10 to-transparent",
-      items: [
-        "Age 11-12 years for Grade 6",
-        "Strong foundation in core subjects",
-        "Admission entrance examination",
-        "Parent-teacher interview",
-      ],
+      items:
+        t("admin.eligibility.secondary.items", { returnObjects: true }) || [],
     },
   ];
 
@@ -139,31 +137,29 @@ const Admission = () => {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
                 <Star className="text-yellow-400 fill-yellow-400" size={16} />
                 <span className="text-sm text-gray-300 font-medium">
-                  Top Rated Academy 2026
+                  {t("admin.hero.badge")}
                 </span>
               </div>
 
               <h1 className="text-5xl md:text-7xl font-extrabold mb-8 text-white leading-[1.1]">
-                Begin Your Journey with{" "}
+                {t("admin.hero.title")}
                 <span className="bg-gradient-to-r from-[#9D99ED] to-[#7983DC] bg-clip-text text-transparent">
-                  Excellence
+                  {t("admin.hero.desc")}
                 </span>
               </h1>
 
               <p className="text-xl text-gray-400 mb-10 leading-relaxed max-w-xl">
-                Join a community of learners where every student is valued and
-                empowered to achieve their dreams through innovation and
-                discipline.
+                {t("admin.hero.description")}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-5">
                 <button className="px-8 py-4 bg-[#9D99ED] hover:bg-[#7983DC] text-white font-bold rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 shadow-lg shadow-purple-500/25 group">
-                  Start Application
+                  {t("admin.hero.buttons.apply")}
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-2" />
                 </button>
 
                 <button className="px-8 py-4 bg-transparent border-2 border-white/20 hover:border-[#9D99ED] text-white font-bold rounded-2xl flex items-center justify-center gap-3 transition-all duration-300 group">
-                  Schedule Tour
+                  {t("admin.hero.buttons.tour")}
                   <Calendar className="h-5 w-5 text-gray-400 group-hover:text-[#9D99ED]" />
                 </button>
               </div>
@@ -201,8 +197,10 @@ const Admission = () => {
                     <Users className="text-white" size={24} />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-white">1,200+</div>
-                    <div className="text-xs text-gray-400 uppercase tracking-tighter">
+                    <div className="text-2xl font-bold text-amber-300">
+                      1,200+
+                    </div>
+                    <div className="text-xs text-amber-400 uppercase tracking-tighter">
                       Active Students
                     </div>
                   </div>
@@ -215,16 +213,19 @@ const Admission = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Reviews Section */}
       <section className="py-24 bg-black overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter">
-              Academic <span className="text-[#6E71BD] italic">Programs</span>
+              {t("admin.academicPrograms.title")}{" "}
+              <span className="text-[#6E71BD] italic">
+                {t("admin.academicPrograms.programs")}
+              </span>
             </h2>
             <p className="mt-4 font-mono text-xs uppercase tracking-[0.3em] text-gray-500">
-              [ Intelligence Development // Level: Advanced ]
+              {t("admin.academicPrograms.subtitle")}
             </p>
             <div className="h-1 w-20 bg-[#6E71BD] mx-auto mt-6 rounded-full shadow-[0_0_15px_rgba(110,113,189,0.5)]"></div>
           </div>
@@ -232,13 +233,21 @@ const Admission = () => {
           <div className="mx-auto max-w-4xl">
             <div className="flex w-full gap-2 p-1 bg-gray-900/50 rounded-2xl border border-gray-800 mb-8">
               {[
-                { id: "primary", label: "Primary", color: "border-blue-500" },
+                {
+                  id: "primary",
+                  label: t("admin.academicPrograms.tabs.primary"),
+                  color: "border-blue-500",
+                },
                 {
                   id: "middle",
-                  label: "Middle School",
+                  label: t("admin.academicPrograms.tabs.middle"),
                   color: "border-green-500",
                 },
-                { id: "high", label: "High School", color: "border-[#6E71BD]" },
+                {
+                  id: "high",
+                  label: t("admin.academicPrograms.tabs.high"),
+                  color: "border-[#6E71BD]",
+                },
               ].map((tab) => (
                 <button
                   key={tab.id}
@@ -265,40 +274,55 @@ const Admission = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-black text-white uppercase">
-                          Grades 1-5
+                          {t("admin.academicPrograms.primary.title")}
                         </h3>
-                        <p className="text-[#6E71BD] font-mono text-[10px] uppercase">
-                          Foundation Level
+                        <p className="text-[#373bc8] font-mono text-[16px] uppercase">
+                          {t("admin.academicPrograms.primary.tag")}
                         </p>
                       </div>
                     </div>
 
                     <p className="mb-8 text-gray-400 leading-relaxed italic border-l-2 border-[#6E71BD] pl-4">
-                      "Our primary program builds strong foundations in core
-                      subjects while nurturing curiosity and creativity."
+                      {t("admin.academicPrograms.primary.quote")}
                     </p>
 
                     <div className="grid gap-6 sm:grid-cols-2">
                       {[
                         {
                           icon: BookOpen,
-                          title: "Language Arts",
-                          desc: "Reading, writing, and communication",
+                          title: t(
+                            "admin.academicPrograms.primary.subjects.0.title",
+                          ),
+                          desc: t(
+                            "admin.academicPrograms.primary.subjects.0.desc",
+                          ),
                         },
                         {
                           icon: Calculator,
-                          title: "Mathematics",
-                          desc: "Number sense and problem-solving",
+                          title: t(
+                            "admin.academicPrograms.primary.subjects.1.title",
+                          ),
+                          desc: t(
+                            "admin.academicPrograms.primary.subjects.1.desc",
+                          ),
                         },
                         {
                           icon: Microscope,
-                          title: "Science",
-                          desc: "Exploration of the natural world",
+                          title: t(
+                            "admin.academicPrograms.primary.subjects.2.title",
+                          ),
+                          desc: t(
+                            "admin.academicPrograms.primary.subjects.2.desc",
+                          ),
                         },
                         {
                           icon: Globe2,
-                          title: "Social Studies",
-                          desc: "Cultural awareness and citizenship",
+                          title: t(
+                            "admin.academicPrograms.primary.subjects.3.title",
+                          ),
+                          desc: t(
+                            "admin.academicPrograms.primary.subjects.3.desc",
+                          ),
                         },
                       ].map((item, i) => (
                         <div key={i} className="flex items-start gap-4 group">
@@ -325,10 +349,10 @@ const Admission = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-black text-white uppercase">
-                          Grades 6-8
+                          {t("admin.academicPrograms.middle.title")}
                         </h3>
                         <p className="text-[#6E71BD] font-mono text-[10px] uppercase">
-                          Intermediate Level
+                          {t("admin.academicPrograms.middle.level")}
                         </p>
                       </div>
                     </div>
@@ -337,10 +361,14 @@ const Admission = () => {
                         <Calculator className="mt-1 h-5 w-5 text-[#6E71BD]" />
                         <div>
                           <p className="font-bold text-gray-200 uppercase text-sm tracking-wide">
-                            Advanced Math
+                            {t(
+                              "admin.academicPrograms.middle.subjects.1.title",
+                            )}
                           </p>
                           <p className="text-xs text-gray-500 mt-1">
-                            Algebra and geometry foundations
+                            {t(
+                              "admin.academicPrograms.middle.subjects.2.title",
+                            )}
                           </p>
                         </div>
                       </div>
@@ -360,10 +388,10 @@ const Admission = () => {
                       </div>
                       <div>
                         <h3 className="text-2xl font-black text-white uppercase">
-                          Grades 9-12
+                          {t("admin.academicPrograms.high.title")}
                         </h3>
                         <p className="text-[#6E71BD] font-mono text-[10px] uppercase">
-                          Professional Level
+                          {t("admin.academicPrograms.high.tag")}
                         </p>
                       </div>
                     </div>
@@ -372,10 +400,10 @@ const Admission = () => {
                         <Globe2 className="mt-1 h-5 w-5 text-[#6E71BD]" />
                         <div>
                           <p className="font-bold text-gray-200 uppercase text-sm tracking-wide">
-                            IB Diploma
+                            {t("admin.academicPrograms.high.subjects.0.title")}
                           </p>
                           <p className="text-xs text-gray-500 mt-1">
-                            Globally recognized qualification
+                            {t("admin.academicPrograms.high.subjects.0.desc")}
                           </p>
                         </div>
                       </div>
@@ -393,11 +421,13 @@ const Admission = () => {
           {/* Заголовок */}
           <div className="mb-16 text-center">
             <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter">
-              Extracurricular{" "}
-              <span className="text-[#6E71BD] italic">Activities</span>
+              {t("admin.extracurricular.title")}
+              <span className="text-[#6E71BD] italic">
+                {t("admin.extracurricular.activities")}
+              </span>
             </h2>
             <p className="mt-4 font-mono text-xs uppercase tracking-[0.3em] text-gray-500">
-              [ Skill Development // Extracurricular Modules ]
+              {t("admin.extracurricular.subtitle")}
             </p>
             <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-[#6E71BD] mx-auto mt-6 rounded-full shadow-[0_0_20px_rgba(110,113,189,0.4)]"></div>
           </div>
@@ -406,51 +436,40 @@ const Admission = () => {
           <div className="flex flex-wrap w-full gap-8 justify-center">
             {[
               {
-                title: "Sports",
                 icon: Trophy,
-                list: [
-                  "Football/Soccer",
-                  "Basketball",
-                  "Swimming",
-                  "Track & Field",
-                  "Tennis",
-                ],
+                title: t("admin.extracurricular.categories.0.title"),
+                // Используем 'itemers' как в вашем JSON + добавляем возврат объектов
+                list:
+                  t("admin.extracurricular.categories.0.itemers", {
+                    returnObjects: true,
+                  }) || [],
                 delay: "0.1s",
               },
               {
-                title: "Music & Arts",
                 icon: Music,
-                list: [
-                  "Orchestra",
-                  "Choir",
-                  "Drama Club",
-                  "Art Studio",
-                  "Dance",
-                ],
+                title: t("admin.extracurricular.categories.1.title"),
+                list:
+                  t("admin.extracurricular.categories.1.itemers", {
+                    returnObjects: true,
+                  }) || [],
                 delay: "0.2s",
               },
               {
-                title: "Academic Clubs",
                 icon: Microscope,
-                list: [
-                  "Debate Team",
-                  "Math Olympiad",
-                  "Science Club",
-                  "Robotics",
-                  "Model UN",
-                ],
+                title: t("admin.extracurricular.categories.2.title"),
+                list:
+                  t("admin.extracurricular.categories.2.itemers", {
+                    returnObjects: true,
+                  }) || [],
                 delay: "0.3s",
               },
               {
-                title: "Special Interest",
                 icon: Palette,
-                list: [
-                  "Photography",
-                  "Coding Club",
-                  "Environmental Club",
-                  "Chess Club",
-                  "Yearbook",
-                ],
+                title: t("admin.extracurricular.categories.3.title"),
+                list:
+                  t("admin.extracurricular.categories.3.itemers", {
+                    returnObjects: true,
+                  }) || [],
                 delay: "0.4s",
               },
             ].map((item, idx) => (
@@ -469,15 +488,21 @@ const Admission = () => {
                 </h3>
 
                 <ul className="space-y-3">
-                  {item.list.map((li, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center gap-2 text-gray-400 font-medium group-hover:text-gray-200 transition-colors"
-                    >
-                      <span className="text-[#6E71BD] text-xs">▶</span>
-                      {li}
+                  {Array.isArray(item.list) ? (
+                    item.list.map((li, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center gap-2 text-gray-400 font-medium group-hover:text-gray-200 transition-colors"
+                      >
+                        <span className="text-[#6E71BD] text-xs">▶</span>
+                        {li}
+                      </li>
+                    ))
+                  ) : (
+                    <li className="text-gray-500 text-sm italic">
+                      Загрузка данных...
                     </li>
-                  ))}
+                  )}
                 </ul>
               </div>
             ))}
@@ -491,11 +516,11 @@ const Admission = () => {
           {/* Заголовок */}
           <div className="mb-16 text-center">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
-              Student Support Services
+              {t("admin.studentSupport.title")}
             </h2>
             <div className="h-1.5 w-24 bg-purple-600 mx-auto rounded-full mb-6"></div>
             <p className="max-w-2xl mx-auto text-lg text-gray-400">
-              Comprehensive support for academic and personal growth
+              {t("admin.studentSupport.description")}
             </p>
           </div>
 
@@ -552,10 +577,10 @@ const Admission = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 className="text-5xl font-extrabold mb-4 tracking-tight"
               >
-                Admission Process
+                {t("admin.admissionProcess.title")}
               </motion.h2>
               <p className="text-gray-400 text-lg">
-                Your journey to excellence starts here
+                {t("admin.admissionProcess.description")}
               </p>
             </div>
 
@@ -606,10 +631,10 @@ const Admission = () => {
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="mb-16 text-left border-l-4 border-purple-500 pl-6">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
-                Eligibility Criteria
+                {t("admin.eligibility.title")}
               </h2>
               <p className="text-gray-400 text-lg">
-                Requirements for successful enrollment in our academy
+                {t("admin.eligibility.description")}
               </p>
             </div>
 
@@ -682,7 +707,7 @@ const Admission = () => {
                     <Calendar className="text-purple-400" size={32} />
                   </div>
                   <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-                    Important Dates
+                    {t("admin.importantDates.title")}
                   </h2>
                 </div>
 

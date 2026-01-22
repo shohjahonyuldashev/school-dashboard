@@ -1,0 +1,608 @@
+{
+  "home": {
+    "hero": {
+      "title": "WELCOME TO SCHOOL 1",
+      "subtitle": "A place where future leaders and professionals are born.",
+      "button": "Learn more"
+    },
+    "about": {
+      "title": "ABOUT OUR SCHOOL",
+      "text": "School 1 offers a modern education that combines technology and classical teaching methods."
+    },
+    "programs": {
+      "title_parts1": "OUR",
+      "title_parts2": "PROGRAMS",
+      "selected_label": "selected",
+      "items": [
+        {
+          "title": "Science",
+          "desc": "Hands-on experiments and research for curious minds."
+        },
+        {
+          "title": "Arts",
+          "desc": "Foster creativity through music, drawing, and theater."
+        },
+        {
+          "title": "Sports",
+          "desc": "Develop teamwork, discipline, and healthy competition."
+        },
+        {
+          "title": "Technology",
+          "desc": "Robotics, basic programming, and web development."
+        },
+        {
+          "title": "Languages",
+          "desc": "English club, debate and international communication."
+        },
+        {
+          "title": "Mathematics",
+          "desc": "Logical thinking, complex puzzles and competitions."
+        }
+      ]
+    },
+    "org": {
+      "title_part1": "SCHOOL",
+      "title_part2": "ORGANIZATION",
+      "status": "[ Operational Hierarchy // Status: Active ]",
+      "board_title": "Board of Directors",
+      "board_members": [
+        { "name": "Dr. Sarah Johnson", "role": "Board Chairperson" },
+        { "name": "Michael Chen", "role": "Vice Chairperson" },
+        { "name": "Emily Rodriguez", "role": "Secretary" }
+      ],
+      "principal_label": "Principal",
+      "leader_tag": "LEADER",
+      "principal_name": "Dr. Robert Williams",
+      "principal_role": "Principal & Academic Director",
+      "dept_title": "Department Heads",
+      "dept_heads": [
+        { "title": "Mathematics", "name": "Prof. James Lee" },
+        { "title": "Sciences", "name": "Dr. Lisa Anderson" },
+        { "title": "Languages", "name": "Ms. Maria Garcia" },
+        { "title": "Arts & Sports", "name": "Mr. David Brown" }
+      ],
+      "staff": [
+        { "role": "Counseling", "count": "3 Counselors" },
+        { "role": "Library", "count": "2 Librarians" },
+        { "role": "Administration", "count": "5 Staff Members" },
+        { "role": "Facilities", "count": "4 Staff Members" }
+      ]
+    },
+    "tech": {
+      "tech_stack": "TECH_STACK",
+      "system_cores": "SYSTEM_CORES"
+    },
+    "news": {
+      "title": "News & Events",
+      "items": [
+        {
+          "title": "Science Fair 2025",
+          "desc": "Our students showcase amazing projects in physics, chemistry, and biology."
+        },
+        {
+          "title": "Art Exhibition",
+          "desc": "Explore the creativity of our students in visual arts and design."
+        },
+        {
+          "title": "Sports Day",
+          "desc": "Fun competitions and activities for students of all ages."
+        }
+      ]
+    },
+    "video": {
+      "title": "VIDEO PRESENTATION"
+    },
+    "map": {
+      "title_part1": "WHERE WE",
+      "title_part2": "ARE LOCATED",
+      "address_label": "Headquarters Address",
+      "address_value": "Kokand city, Turon str., house 1",
+      "phone_label": "Contacts",
+      "phone_value": "+998 (95) 120-44-00",
+      "working_hours": "Reception is open from 08:00 to 20:00",
+      "button": "GET DIRECTIONS"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Our",
+      "subtitle": "Academy",
+      "desc": "Committed to educational excellence for over ",
+      "button": "two decades",
+      "years": ", shaping the leaders of tomorrow."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "desc": "To provide exceptional education that empowers students to reach their full potential, fostering critical thinking and creativity."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "desc": "To be the leading educational institution that inspires students to become confident, compassionate, and innovative leaders."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "items": {
+        "integrity": {
+          "title": "Integrity",
+          "desc": "We uphold the highest standards of honesty and ethical behavior in everything we do."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "desc": "Encouraging creativity and new ideas to solve complex challenges in education."
+        },
+        "community": {
+          "title": "Community",
+          "desc": "Building strong relationships between students, teachers, and parents."
+        },
+        "excellence": {
+          "title": "Excellence",
+          "desc": "Striving for the best results in academics, sports, and personal growth."
+        }
+      }
+    },
+    "story": {
+      "since": "Since 1993",
+      "title": "Our Story",
+      "found": "Founded in",
+      "number": "1993",
+      "desc": " Excellence Academy began with a powerful vision to redefine learning.",
+      "growth": "Over the past three decades, we have grown. ",
+      "team_title": "1,200 learners"
+    },
+    "team_title": "OUR ",
+    "group": "TEAM"
+  },
+  "team": {
+    "member1": { "name": "Alice", "role": "Frontend Developer" },
+    "member2": { "name": "Bob", "role": "Lead Designer" },
+    "member3": { "name": "Charlie", "role": "Backend Developer" }
+  },
+  "scrach": {
+    "students_title_part1": "OUR ",
+    "students_title_part2": " STUDENTS",
+    "years_old": "years old"
+  },
+  "students": {
+    "s1": { "name": "Anya" },
+    "s2": { "name": "Max" },
+    "s3": { "name": "Lena" },
+    "s4": { "name": "Ivan" }
+  },
+  "clubs": {
+    "clubs_title_part1": "OUR ",
+    "clubs_title_part2": " CLUBS ",
+    "clubs_title_part3": " AND ACHIEVEMENTS"
+  },
+  "admin": {
+    "hero": {
+      "badge": "Top Rated Academy 2026",
+      "title": "Begin Your Journey with ",
+      "desc": "Excellence",
+      "description": "Join a community of learners where every student is valued and empowered to achieve their dreams through innovation and discipline.",
+      "buttons": {
+        "apply": "Start Application",
+        "tour": "Schedule Tour soon"
+      },
+      "stats": {
+        "activeStudents": "1,200+",
+        "label": "Active Students"
+      }
+    },
+    "academicPrograms": {
+      "title": "Academic ",
+      "programs": " Programs",
+      "subtitle": "[ Intelligence Development // Level: Advanced ]",
+      "tabs": {
+        "primary": "Primary",
+        "middle": "Middle School",
+        "high": "High School"
+      },
+      "primary": {
+        "title": "Grades 1-5",
+        "tag": "Foundation Level",
+        "quote": "Our primary program builds strong foundations in core subjects while nurturing curiosity and creativity.",
+        "subjects": [
+          {
+            "title": "Language Arts",
+            "desc": "Reading, writing, and communication"
+          },
+          {
+            "title": "Mathematics",
+            "desc": "Number sense and problem-solving"
+          },
+          { "title": "Science", "desc": "Exploration of the natural world" },
+          {
+            "title": "Social Studies",
+            "desc": "Cultural awareness and citizenship"
+          }
+        ]
+      },
+      "middle": {
+        "title": "Grades 6-8",
+        "level": "Intermediate Level",
+        "subjects": [
+          { "title": "Language Arts", "desc": "Literature and writing skills" },
+          {
+            "title": "Advanced Math",
+            "desc": "Algebra and geometry foundations"
+          },
+          { "title": "Science", "desc": "Introduction to Physics and Bio" },
+          {
+            "title": "Social Studies",
+            "desc": "History and global citizenship"
+          }
+        ]
+      },
+      "high": {
+        "title": "Grades 9-12",
+        "tag": "Professional Level",
+        "subjects": [
+          {
+            "title": "IB Diploma",
+            "desc": "Globally recognized qualification"
+          }
+        ]
+      }
+    },
+    "extracurricular": {
+      "title": "Extracurricular ",
+      "activities": " Activities",
+      "subtitle": "[ Skill Development // Extracurricular Modules ]",
+      "categories": [
+        {
+          "title": "Sports",
+          "itemers": [
+            "Football/Soccer",
+            "Basketball",
+            "Swimming",
+            "Track & Field",
+            "Tennis"
+          ]
+        },
+        {
+          "title": "Music & Arts",
+          "itemers": ["Orchestra", "Choir", "Drama Club", "Art Studio", "Dance"]
+        },
+        {
+          "title": "Academic Clubs",
+          "itemers": [
+            "Debate Team",
+            "Math Olympiad",
+            "Science Club",
+            "Robotics",
+            "Model UN"
+          ]
+        },
+        {
+          "title": "Special Interest",
+          "itemers": [
+            "Photography",
+            "Coding Club",
+            "Environmental Club",
+            "Chess Club",
+            "Yearbook"
+          ]
+        }
+      ]
+    },
+    "studentSupport": {
+      "title": "Student Support Services",
+      "description": "Comprehensive support for academic and personal growth",
+      "services": [
+        {
+          "title": "Academic Support",
+          "desc": "Tutoring programs, learning support specialists, and personalized plans."
+        },
+        {
+          "title": "Counseling Services",
+          "desc": "Professional guidance for academic planning and university preparation."
+        },
+        {
+          "title": "Health & Wellness",
+          "desc": "On-campus nurse, wellness programs, and mental health support."
+        }
+      ]
+    },
+    "admissionProcess": {
+      "title": "Admission Process",
+      "description": "Your journey to excellence starts here",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Application",
+          "desc": "Submit your application form and required documents."
+        },
+        {
+          "step": "02",
+          "title": "Assessment",
+          "desc": "Participate in entrance examinations and interviews."
+        },
+        {
+          "step": "03",
+          "title": "Review",
+          "desc": "Our admissions team reviews your profile."
+        },
+        {
+          "step": "04",
+          "title": "Acceptance",
+          "desc": "Receive your acceptance letter and enrollment details."
+        }
+      ]
+    },
+    "eligibility": {
+      "title": "Eligibility Criteria",
+      "description": "Requirements for successful enrollment in our academy",
+      "elementary": {
+        "level": "Elementary Level",
+        "items": [
+          "Age 5-6 years for Grade 1",
+          "Basic knowledge of English and Mathematics",
+          "Report card from previous school",
+          "Birth certificate"
+        ]
+      },
+      "secondary": {
+        "level": "Middle & High School",
+        "items": [
+          "Age 11+ years",
+          "Entrance test in English and Logic",
+          "Academic transcripts for the last 2 years",
+          "Letter of recommendation from teachers"
+        ]
+      }
+    },
+    "importantDates": {
+      "title": "Important Dates",
+      "events": [
+        {
+          "label": "Application Opening",
+          "date": "January 15, 2026",
+          "status": "Upcoming"
+        },
+        {
+          "label": "Application Deadline",
+          "date": "March 31, 2026",
+          "status": "Critical"
+        },
+        {
+          "label": "Entrance Examinations",
+          "date": "April 12-14, 2026",
+          "status": "Scheduled"
+        },
+        {
+          "label": "Results Declaration",
+          "date": "May 15, 2026",
+          "status": "Final"
+        }
+      ]
+    }
+  },
+  "info": {
+    "hero": {
+      "badge": "Institutional Excellence",
+      "title": "Information",
+      "subtitle": "Everything you need to know about Uzbekistan International School's ecosystem."
+    },
+    "facts": {
+      "students": "Students",
+      "teachers": "Qualified Teachers",
+      "countries": "Countries",
+      "ratio": "Teacher Ratio"
+    },
+    "contact": {
+      "title": "Contact",
+      "hub": "Hub",
+      "direct": "Direct Line",
+      "support": "Support",
+      "availability": "Available 24/7 for parents"
+    },
+    "campus": {
+      "hours": "Campus",
+      "operation": "Hours",
+      "days": {
+        "weekdays": "Mon - Fri",
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "closed": "Closed"
+      }
+    },
+    "space": {
+      "title": "Our",
+      "subtitle": "Space",
+      "desc": "World-class infrastructure designed for the next generation of global leaders.",
+      "tags": {
+        "science": "Science",
+        "knowledge": "Knowledge",
+        "sports": "Sports"
+      },
+      "items": {
+        "labs": "Labs",
+        "library": "Library",
+        "arena": "Arena"
+      }
+    },
+    "programs": {
+      "academic": {
+        "title": "Academic Path",
+        "list": [
+          "International Baccalaureate (IB)",
+          "Cambridge International",
+          "AP Courses",
+          "STEM Excellence"
+        ]
+      },
+      "assets": {
+        "title": "Campus Assets",
+        "list": [
+          "Digital Resource Hub",
+          "Olympic Swimming Pool",
+          "Music & Arts Studios",
+          "Medical Center"
+        ]
+      }
+    }
+  },
+  "students_section": {
+    "main_title": "Our Students",
+    "faq_title": "Frequently Asked Questions",
+    "cards": {
+      "pride": {
+        "title": "School Pride",
+        "desc": "Our top students and their achievements throughout the year.",
+        "staff_name": "Alexander Sergeevich",
+        "staff_role": "School Director",
+        "staff_quote": "«These students are our future and our primary value!»"
+      },
+      "olympiads": {
+        "title": "Olympiads",
+        "desc": "Winners of city and international competitions.",
+        "staff_name": "Elena Viktorovna",
+        "staff_role": "Academic Dean",
+        "staff_quote": "«Intelligence and hard work are the keys to global victories.»"
+      },
+      "sports": {
+        "title": "Athletes",
+        "desc": "The team that brings home trophies every single month.",
+        "staff_name": "Igor Petrovich",
+        "staff_role": "Athletic Director",
+        "staff_quote": "«A healthy mind in a healthy body!»"
+      },
+      "military": {
+        "title": "Military",
+        "desc": "Preparing future defenders and instilling discipline.",
+        "staff_name": "Victor Nikolaevich",
+        "staff_role": "Military Instructor",
+        "staff_quote": "«Discipline is the mother of all victory.»"
+      }
+    },
+    "faq": {
+      "q1": "How can I get on the 'School Pride' list?",
+      "a1": "You need to have excellent grades in all subjects and actively participate in school life throughout the year.",
+      "q2": "What esports disciplines are available?",
+      "a2": "Currently, we have sections for Call of Duty, CS2, and strategy analytics.",
+      "q3": "Is a special uniform required for military classes?",
+      "a3": "Yes, classes with Victor Nikolaevich require a camouflage uniform provided by the school."
+    }
+  },
+  "students_page": {
+    "events_title": "Upcoming Events",
+    "event1": {
+      "title": "«School Masters» Tournament:",
+      "br": "in CS2 and Dota 2",
+      "desc": "Prize pool, professional commentators, and live broadcast in the lobby.",
+      "time": "Starts at 18:00"
+    },
+    "event2": {
+      "title": "Tactical ",
+      "br": "Training Day",
+      "desc": "Field trip, orienteering skills practice, and teamwork training.",
+      "location": "Meet at HQ"
+    },
+    "resources_title": "Resources & Materials",
+    "resources": {
+      "journal": {
+        "title": "E-Journal",
+        "desc": "Grades and homework assignments"
+      },
+      "guides": {
+        "title": "Guide Library",
+        "desc": "Tutorials, manuals, and articles"
+      },
+      "rules": {
+        "title": "School Rules",
+        "desc": "Charter and internal regulations"
+      },
+      "timetable": {
+        "title": "Bell Schedule",
+        "desc": "Lesson and break timings"
+      }
+    },
+    "rules_title_part1": "Internal",
+    "rules_title_part2": "Code",
+    "red_zone": {
+      "r1": {
+        "title": "Running in Corridors",
+        "desc": "Maintain a calm pace for general safety."
+      },
+      "r2": {
+        "title": "Gadget Usage",
+        "desc": "Smartphones must be put away during academic classes."
+      },
+      "r3": {
+        "title": "Eating in Classrooms",
+        "desc": "Use only designated lounge areas for snacks."
+      }
+    },
+    "blue_zone": {
+      "b1": {
+        "title": "Dress Code",
+        "desc": "Wearing the uniform highlights your belonging to the school elite."
+      },
+      "b2": {
+        "title": "Teamwork",
+        "desc": "Help your peers in studies and esports training."
+      },
+      "b3": {
+        "title": "Punctuality",
+        "desc": "Arrive 5 minutes before the start — respect the teachers' time."
+      }
+    },
+    "daily_routine_title1": "Daily",
+    "daily_routine_title2": "Routine",
+    "schedule": {
+      "s1": {
+        "task": "Check-in & Registration",
+        "desc": "Attendance check and workspace preparation."
+      },
+      "s2": {
+        "task": "Theory Block",
+        "desc": "Strategy breakdown and past match analysis."
+      },
+      "s3": {
+        "task": "Lunch / Break",
+        "desc": "Rest time in the designated dining area."
+      },
+      "s4": {
+        "task": "Practical Sessions",
+        "desc": "Training in the Blue Zone under mentor supervision."
+      },
+      "s5": {
+        "task": "Daily Wrap-up",
+        "desc": "Result discussion and feedback session."
+      }
+    },
+    "awards_title": "ACHIEVEMENT SYSTEM",
+    "achievements": {
+      "a1": { "title": "Night Owl", "desc": "Evening access to the Blue Zone" },
+      "a2": {
+        "title": "Code Master",
+        "desc": "Zero Red Zone violations for a month"
+      },
+      "a3": {
+        "title": "Team Lead",
+        "desc": "Assisting 5 newcomers with adaptation"
+      }
+    },
+    "mentors_title": "MENTORS ",
+    "mentor_dir": {
+      "title": "DISCIPLINE IS ",
+      "win": "VICTORY",
+      "quote": "Order in the halls means order in the mind. We are building a community of leaders, not just a school.",
+      "name": "Ivan Ivanov"
+    },
+    "mentor_dean": {
+      "title": "INTELLIGENCE IS ",
+      "win": "YOUR WEAPON",
+      "quote": "In the Blue Zone, every byte of information brings you closer to digital dominance.",
+      "name": "Anna Petrova"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "admission": "Admission",
+    "information": "Information",
+    "students": "Students",
+    "application": "Application"
+  }
+}

@@ -1,0 +1,593 @@
+{
+  "home": {
+    "hero": {
+      "title": "SCHOOL 1 GA XUSH KELIBSIZ",
+      "subtitle": "Kelajak yetakchilari va professionallari kamol topadigan maskan.",
+      "button": "Batafsil ma'lumot"
+    },
+    "about": {
+      "title": "MAKTABIMIZ HAQIDA",
+      "text": "School 1 texnologiyalar va klassik o'qitish metodikalarini birlashtirgan zamonaviy ta'limni taklif etadi."
+    },
+    "programs": {
+      "title_parts1": "BIZNING",
+      "title_parts2": "DASTURLAR",
+      "selected_label": "tanlangan",
+      "items": [
+        {
+          "title": "Fan",
+          "desc": "Zukkolar uchun amaliy tajribalar va tadqiqotlar."
+        },
+        {
+          "title": "San'at",
+          "desc": "Musiqa, rasm chizish va teatr orqali ijodkorlikni rivojlantirish."
+        },
+        {
+          "title": "Sport",
+          "desc": "Jamoaviy ish, intizom va sog'lom raqobatni shakllantirish."
+        },
+        {
+          "title": "Texnologiyalar",
+          "desc": "Robototexnika, dasturlash asoslari va veb-ishlanmalar."
+        },
+        {
+          "title": "Tillar",
+          "desc": "Ingliz tili klubi, munozaralar va xalqaro muloqot."
+        },
+        {
+          "title": "Matematika",
+          "desc": "Mantiqiy fikrlash, murakkab boshqotirmalar va olimpiadalar."
+        }
+      ]
+    },
+    "org": {
+      "title_part1": "MAKTAB",
+      "title_part2": "TASHKILIY TUZILMASI",
+      "status": "[ Operatsion ierarxiya // Holati: Faol ]",
+      "board_title": "Direktorlar kengashi",
+      "board_members": [
+        { "name": "Dr. Sara Jonson", "role": "Kengash raisi" },
+        { "name": "Maykl Chen", "role": "O'rinbosar" },
+        { "name": "Emili Rodriges", "role": "Kotib" }
+      ],
+      "principal_label": "Direktor",
+      "leader_tag": "YETAKCHI",
+      "principal_name": "Dr. Robert Uilyams",
+      "principal_role": "Direktor va akademik rahbar",
+      "dept_title": "Departament rahbarlari",
+      "dept_heads": [
+        { "title": "Matematika", "name": "Prof. Jeyms Li" },
+        { "title": "Fanlar", "name": "Dr. Liza Anderson" },
+        { "title": "Tillar", "name": "Mariya Garsiya xonim" },
+        { "title": "San'at va Sport", "name": "Devid Braun janoblari" }
+      ],
+      "staff": [
+        { "role": "Maslahat", "count": "3 ta maslahatchi" },
+        { "role": "Kutubxona", "count": "2 ta kutubxonachi" },
+        { "role": "Ma'muriyat", "count": "5 ta xodim" },
+        { "role": "Xo'jalik bo'limi", "count": "4 ta xodim" }
+      ]
+    },
+    "tech": {
+      "tech_stack": "TEXNOLOGIYA_STEKI",
+      "system_cores": "TIZIM_YADROLARI"
+    },
+    "news": {
+      "title": "Yangiliklar va Tadbirlar",
+      "items": [
+        {
+          "title": "Ilmiy ko'rgazma 2025",
+          "desc": "Talabalarimiz fizika, kimyo va biologiya bo'yicha ajoyib loyihalarini namoyish etadilar."
+        },
+        {
+          "title": "Badiiy ko'rgazma",
+          "desc": "Talabalarimizning tasviriy san'at va dizayn sohasidagi ijod namunalarini kashf eting."
+        },
+        {
+          "title": "Sport kuni",
+          "desc": "Barcha yoshdagi talabalar uchun qiziqarli musobaqalar va tadbirlar."
+        }
+      ]
+    },
+    "video": {
+      "title": "VIDEO TAQDIMOT"
+    },
+    "map": {
+      "title_part1": "BIZNING",
+      "title_part2": "MANZILIMIZ",
+      "address_label": "Shtab manzili",
+      "address_value": "Qo'qon sh., Turon ko'chasi, 1-uy",
+      "phone_label": "Kontaktlar",
+      "phone_value": "+998 (95) 120-44-00",
+      "working_hours": "Qabulxona soat 08:00 dan 20:00 gacha ishlaydi",
+      "button": "YO'NALISHNI ANIQLASH"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Bizning",
+      "subtitle": "Akademiya",
+      "desc": "Biz ",
+      "button": "yigirma yildan",
+      "years": " ortiq vaqt davomida ta'lim sifatini oshirish va kelajak yetakchilarini shakllantirish yo'lida mehnat qilmoqdamiz."
+    },
+    "mission": {
+      "title": "Bizning missiyamiz",
+      "desc": "Talabalarning to'liq salohiyatini ro'yobga chiqarishga imkon beruvchi, tanqidiy fikrlash va ijodkorlikni rivojlantiruvchi ajoyib ta'lim berish."
+    },
+    "vision": {
+      "title": "Bizning maqsadimiz",
+      "desc": "Talabalarni o'ziga ishongan, rahmdil va innovatsion yetakchilar bo'lishga ilhomlantiradigan yetakchi ta'lim muassasasi bo'lish."
+    },
+    "values": {
+      "title": "Asosiy qadriyatlarimiz",
+      "items": {
+        "integrity": {
+          "title": "Halollik",
+          "desc": "Biz har bir ishimizda halollik va axloqiy xulq-atvorning eng yuqori standartlariga amal qilamiz."
+        },
+        "innovation": {
+          "title": "Innovatsiya",
+          "desc": "Ta'limdagi murakkab vazifalarni hal qilish uchun ijodkorlik va yangi g'oyalarni rag'batlantirish."
+        },
+        "community": {
+          "title": "Hamjamiyat",
+          "desc": "Talabalar, o'qituvchilar va ota-onalar o'rtasida mustahkam aloqalarni o'rnatish."
+        },
+        "excellence": {
+          "title": "Mukammallik",
+          "desc": "O'qishda, sportda va shaxsiy rivojlanishda eng yaxshi natijalarga erishishga intilish."
+        }
+      }
+    },
+    "story": {
+      "since": "1993-yildan beri",
+      "title": "Bizning tariximiz",
+      "found": "Asos solingan yil",
+      "number": "1993",
+      "desc": "Mukammallik Akademiyasi o'qitish tizimini qayta belgilash haqidagi kuchli tasavvur bilan o'z faoliyatini boshlagan.",
+      "growth": "O'tgan o'ttiz yil ichida bizning o'quvchilarimiz soni. ",
+      "team_title": "1,200 o'quvchilar yetdi"
+    },
+    "team_title": "BIZNING ",
+    "group": "JAMOAMIZ"
+  },
+  "team": {
+    "member1": { "name": "Alisa", "role": "Frontend dasturchi" },
+    "member2": { "name": "Bob", "role": "Bosh dizayner" },
+    "member3": { "name": "Charli", "role": "Backend dasturchi" }
+  },
+  "scrach": {
+    "students_title_part1": "BIZNING ",
+    "students_title_part2": " TALABALAR",
+    "years_old": "yosh"
+  },
+  "students": {
+    "s1": { "name": "Anora" },
+    "s2": { "name": "Maqsud" },
+    "s3": { "name": "Laylo" },
+    "s4": { "name": "Ivan" }
+  },
+  "clubs": {
+    "clubs_title_part1": "BIZNING ",
+    "clubs_title_part2": " TO'GARAKLAR ",
+    "clubs_title_part3": " VA YUTUQLARIMIZ"
+  },
+  "admin": {
+    "hero": {
+      "badge": "Eng yaxshi akademiya 2026",
+      "title": "Mukammallik sari yo'lingizni ",
+      "desc": "boshlang",
+      "description": "Har bir o'quvchi qadrlanadigan, innovatsiyalar va tartib-intizom orqali orzularga erishish imkoniyati beriladigan bilimlar hamjamiyatiga qo'shiling.",
+      "buttons": {
+        "apply": "Ariza topshirishni boshlash",
+        "tour": "Ekskursiyaga yozilish tez kunda"
+      },
+      "stats": {
+        "value": "1,200+",
+        "label": "Faol o'quvchilar"
+      }
+    },
+    "academicPrograms": {
+      "title": "Akademik ",
+      "programs": " Dasturlar",
+      "subtitle": "[ Intellektni rivojlantirish // Daraja: Yuqori ]",
+      "tabs": {
+        "primary": "Boshlang'ich",
+        "middle": "O'rta maktab",
+        "high": "Yuqori maktab"
+      },
+      "primary": {
+        "title": "1-5 sinflar",
+        "tag": "Asosiy daraja",
+        "quote": "Boshlang'ich dasturimiz qiziquvchanlik va ijodkorlikni rag'batlantirish bilan birga asosiy fanlardan mustahkam poydevor yaratadi.",
+        "subjects": [
+          { "title": "Til o'rganish", "desc": "O'qish, yozish va muloqot" },
+          { "title": "Matematika", "desc": "Sonlar va muammolarni yechish" },
+          { "title": "Tabiiy fanlar", "desc": "Atrof-muhitni o'rganish" },
+          { "title": "Ijtimoiy fanlar", "desc": "Madaniyat va fuqarolik" }
+        ]
+      },
+      "middle": {
+        "title": "6-8 Sinflar",
+        "level": "O'rta daraja",
+        "subjects": [
+          { "title": "Til o'rganish", "desc": "O'qish, yozish va muloqot" },
+          { "title": "Matematika", "desc": "Sonlar va muammolarni yechish" },
+          { "title": "Tabiiy fanlar", "desc": "Atrof-muhitni o'rganish" },
+          { "title": "Ijtimoiy fanlar", "desc": "Madaniyat va fuqarolik" }
+        ]
+      },
+      "high": {
+        "title": "9-12 Sinflar",
+        "tag": "Professional daraja",
+        "subjects": [
+          {
+            "title": "IB Diplomi",
+            "desc": "Xalqaro miqyosda tan olingan malaka"
+          }
+        ]
+      }
+    },
+    "extracurricular": {
+      "title": "Darsdan tashqari ",
+      "activities": "mashg'ulotlar",
+      "subtitle": "[ Ko'nikmalarni rivojlantirish // To'garaklar ]",
+      "categories": [
+        {
+          "title": "Sport",
+          "itemers": [
+            "Futbol",
+            "Basketbol",
+            "Suzish",
+            "Yengil atletika",
+            "Tennis"
+          ]
+        },
+        {
+          "title": "Musiqa va San'at",
+          "itemers": ["Orkestr", "Xor", "Drama klubi", "Rasm chizish", "Raqs"]
+        },
+        {
+          "title": "Ilmiy klublar",
+          "itemers": [
+            "Debat jamoasi",
+            "Matematika olimpiadasi",
+            "Ilmiy to'garak",
+            "Robototexnika",
+            "Model BMT"
+          ]
+        },
+        {
+          "title": "Maxsus qiziqishlar",
+          "itemers": [
+            "Fotosurat",
+            "Dasturlash klubi",
+            "Ekologiya klubi",
+            "Shaxmat klubi",
+            "Maktab gazetasi"
+          ]
+        }
+      ]
+    },
+    "studentSupport": {
+      "title": "Talabalarni qo'llab-quvvatlash xizmatlari",
+      "description": "Akademik va shaxsiy o'sish uchun har tomonlama yordam",
+      "services": [
+        {
+          "title": "Akademik yordam",
+          "desc": "Repetitorlik dasturlari va shaxsiy o'quv rejalari."
+        },
+        {
+          "title": "Maslahat xizmatlari",
+          "desc": "Kasbga yo'naltirish va universitetga tayyorgarlik bo'yicha maslahatlar."
+        },
+        {
+          "title": "Salomatlik",
+          "desc": "Maktab hamshirasi va ruhiy salomatlikni qo'llab-quvvatlash dasturlari."
+        }
+      ]
+    },
+    "admissionProcess": {
+      "title": "Qabul jarayoni",
+      "description": "Muvaffaqiyatga bo'lgan sayohatingiz shu yerdan boshlanadi",
+      "steps": [
+        {
+          "step": "01",
+          "title": "Ariza",
+          "desc": "Ariza shakli va kerakli hujjatlarni topshiring."
+        },
+        {
+          "step": "02",
+          "title": "Sinov",
+          "desc": "Kirish imtihonlari va suhbatlarda qatnashing."
+        },
+        {
+          "step": "03",
+          "title": "Ko'rib chiqish",
+          "desc": "Qabul komissiyasi profilingizni o'rganib chiqadi."
+        },
+        {
+          "step": "04",
+          "title": "Qabul",
+          "desc": "Qabul xati va ro'yxatdan o'tish tafsilotlarini oling."
+        }
+      ]
+    },
+    "eligibility": {
+      "title": "Saralash mezonlari",
+      "description": "Akademiyamizga muvaffaqiyatli kirish uchun talablar",
+      "elementary": {
+        "level": "Boshlang'ich daraja",
+        "items": [
+          "1-sinf uchun 5-6 yosh",
+          "Ingliz tili va matematikadan asosiy bilimlar",
+          "Oldingi maktabdan tabel",
+          "Tug'ilganlik haqida guvohnoma"
+        ]
+      },
+      "secondary": {
+        "level": "O'rta va yuqori maktab",
+        "items": [
+          "11 yoshdan yuqori",
+          "Ingliz tili va mantiqdan kirish testi",
+          "Oxirgi 2 yillik akademik ma'lumotnoma",
+          "O'qituvchilardan tavsiyanoma"
+        ]
+      }
+    },
+    "importantDates": {
+      "title": "Muhim sanalar",
+      "events": [
+        {
+          "label": "Qabul boshlanishi",
+          "date": "15-yanvar, 2026",
+          "status": "Tez orada"
+        },
+        {
+          "label": "Qabul tugashi",
+          "date": "31-mart, 2026",
+          "status": "Muhim"
+        },
+        {
+          "label": "Kirish imtihonlari",
+          "date": "12-14 aprel, 2026",
+          "status": "Rejalashtirilgan"
+        },
+        {
+          "label": "Natijalarni e'lon qilish",
+          "date": "15-may, 2026",
+          "status": "Yakuniy"
+        }
+      ]
+    }
+  },
+  "info": {
+    "hero": {
+      "badge": "Institutsional mukammallik",
+      "title": "Ma'lumotlar",
+      "subtitle": "O'zbekiston xalqaro maktabi ekotizimi haqida bilishingiz kerak bo'lgan barcha ma'lumotlar."
+    },
+    "facts": {
+      "students": "Talabalar",
+      "teachers": "Malakali o'qituvchilar",
+      "countries": "Davlatlar",
+      "ratio": "O'qituvchilar nisbati"
+    },
+    "contact": {
+      "title": "Aloqa",
+      "hub": "markazi",
+      "direct": "To'g'ridan-to'g'ri aloqa",
+      "support": "Qo'llab-quvvatlash",
+      "availability": "Ota-onalar uchun 24/7 xizmatda"
+    },
+    "campus": {
+      "hours": "Ish ",
+      "operation": "vaqtlari",
+      "days": {
+        "weekdays": "Dush - Jum",
+        "saturday": "Shanba",
+        "sunday": "Yakshanba",
+        "closed": "Yopiq"
+      }
+    },
+    "space": {
+      "title": "Bizning",
+      "subtitle": "hududimiz",
+      "desc": "Keyingi avlod global yetakchilari uchun mo'ljallangan jahon darajasidagi infratuzilma.",
+      "tags": {
+        "science": "Fan",
+        "knowledge": "Bilim",
+        "sports": "Sport"
+      },
+      "items": {
+        "labs": "Laboratoriyalar",
+        "library": "Kutubxona",
+        "arena": "Arena"
+      }
+    },
+    "programs": {
+      "academic": {
+        "title": "Akademik yo'nalish",
+        "list": [
+          "Xalqaro bakalavriat (IB)",
+          "Cambridge International",
+          "AP kurslari",
+          "STEM mukammalligi"
+        ]
+      },
+      "assets": {
+        "title": "Kampus resurslari",
+        "list": [
+          "Raqamli resurs markazi",
+          "Olimpiya basseyni",
+          "Musiqa va san'at studiyalari",
+          "Tibbiyot markazi"
+        ]
+      }
+    }
+  },
+  "students_section": {
+    "main_title": "Bizning Talabalar",
+    "faq_title": "Ko'p beriladigan savollar",
+    "cards": {
+      "pride": {
+        "title": "Maktab Faxri",
+        "desc": "Eng yaxshi o'quvchilarimiz va ularning yil davomidagi yutuqlari.",
+        "staff_name": "Aleksandr Sergeyevich",
+        "staff_role": "Maktab direktori",
+        "staff_quote": "«Bu yoshlar — bizning kelajagimiz va asosiy boyligimizdir!»"
+      },
+      "olympiads": {
+        "title": "Olimpiadalar",
+        "desc": "Shahar va xalqaro bosqichlar g'oliblari.",
+        "staff_name": "Yelena Viktorovna",
+        "staff_role": "O'quv ishlari bo'yicha mudir",
+        "staff_quote": "«Intellekt va mehnat — jahon g'alabalarining kalitidir.»"
+      },
+      "sports": {
+        "title": "Sportchilar",
+        "desc": "Har oyda kuboklar olib keladigan jamoa.",
+        "staff_name": "Igor Petrovich",
+        "staff_role": "Sport ishlari bo'yicha mudir",
+        "staff_quote": "«Sog' tanda — sog'lom aql!»"
+      },
+      "military": {
+        "title": "Harbiylar",
+        "desc": "Bo'lajak himoyachilarni tayyorlash va intizom.",
+        "staff_name": "Viktor Nikolayevich",
+        "staff_role": "Harbiy rahbar",
+        "staff_quote": "«Intizom — har qanday g'alabaning onasidir.»"
+      }
+    },
+    "faq": {
+      "q1": "'Maktab faxri' ro'yxatiga qanday kirish mumkin?",
+      "a1": "Barcha fanlardan a'lo baholarga ega bo'lish va yil davomida maktab hayotida faol ishtirok etish kerak.",
+      "q2": "Qaysi kibersport turlari mavjud?",
+      "a2": "Hozirgi vaqtda Call of Duty, CS2 va strategiya tahlili bo'yicha to'garaklarimiz bor.",
+      "q3": "Harbiy mashg'ulotlar uchun maxsus kiyim kerakmi?",
+      "a3": "Ha, Viktor Nikolayevich bilan mashg'ulotlar uchun maktab tomonidan beriladigan kamuflyaj formasi talab qilinadi."
+    }
+  },
+  "students_page": {
+    "events_title": "Yaqindagi tadbirlar",
+    "event1": {
+      "title": "«School Masters» turniri:",
+      "br": "CS2 va Dota 2 bo'yicha",
+      "desc": "Sovrin jamg'armasi, professional sharhlovchilar va zalda jonli translyatsiya.",
+      "time": "Boshlanishi 18:00 da"
+    },
+    "event2": {
+      "title": "Taktik tayyorgarlik ",
+      "br": "kuni",
+      "desc": "Dala chiqishi, mo'ljal olish ko'nikmalarini mashq qilish va jamoaviy ish.",
+      "location": "Shtab yonida yig'ilish"
+    },
+    "resources_title": "Resurslar va materiallar",
+    "resources": {
+      "journal": {
+        "title": "Elektron jurnal",
+        "desc": "Baholar va uy vazifalari"
+      },
+      "guides": {
+        "title": "Gaydlar kutubxonasi",
+        "desc": "O'quv qo'llanmalari va maqolalar"
+      },
+      "rules": { "title": "Maktab qoidalari", "desc": "Nizom va ichki tartib" },
+      "timetable": {
+        "title": "Qo'ng'iroqlar jadvali",
+        "desc": "Dars va tanaffus vaqtlari"
+      }
+    },
+    "rules_title_part1": "Ichki",
+    "rules_title_part2": "Kodeks",
+    "red_zone": {
+      "r1": {
+        "title": "Yo'laklarda yugurish",
+        "desc": "Umumiy xavfsizlik uchun xotirjam harakatlanish tempiga rioya qiling."
+      },
+      "r2": {
+        "title": "Gadjetlardan foydalanish",
+        "desc": "Akademik darslar vaqtida smartfonlar olib qo'yilishi kerak."
+      },
+      "r3": {
+        "title": "Sinfxonalarda ovqatlanish",
+        "desc": "Yengil tamaddi uchun faqat maxsus ajratilgan dam olish zonalaridan foydalaning."
+      }
+    },
+    "blue_zone": {
+      "b1": {
+        "title": "Dress-kod",
+        "desc": "Formaning mavjudligi sizning maktab elitasiga mansubligingizni ta'kidlaydi."
+      },
+      "b2": {
+        "title": "Jamoaviy ish",
+        "desc": "O'qishda va kibersport mashg'ulotlarida do'stlaringizga yordam bering."
+      },
+      "b3": {
+        "title": "Punktuallik",
+        "desc": "Boshlanishidan 5 daqiqa oldin keling — o'qituvchilar vaqtini hurmat qiling."
+      }
+    },
+    "daily_routine_title1": "Kun",
+    "daily_routine_title2": "tartibi",
+    "schedule": {
+      "s1": {
+        "task": "Yig'ilish va ro'yxatga olish",
+        "desc": "Ishtirokni tekshirish va ish joylarini tayyorlash."
+      },
+      "s2": {
+        "task": "Nazariy blok",
+        "desc": "Strategiyalar tahlili va o'tgan o'yinlar tahlili."
+      },
+      "s3": {
+        "task": "Tushlik / Tanaffus",
+        "desc": "Maxsus ovqatlanish zonasida dam olish vaqti."
+      },
+      "s4": {
+        "task": "Amaliy mashg'ulotlar",
+        "desc": "Mentorlar rahbarligida Blue Zone'da mashg'ulotlar."
+      },
+      "s5": {
+        "task": "Kun yakunlari",
+        "desc": "Natijalar muhokamasi va fikr-mulohazalar."
+      }
+    },
+    "awards_title": "YUTUQLAR SISTEMASI",
+    "achievements": {
+      "a1": {
+        "title": "Night Owl",
+        "desc": "Kechki vaqtda Blue Zone'ga kirish imkoniyati"
+      },
+      "a2": {
+        "title": "Code Master",
+        "desc": "Bir oy davomida Red Zone qoidabuzarliklari 0 ga teng"
+      },
+      "a3": {
+        "title": "Team Lead",
+        "desc": "5 nafar yangi o'quvchiga moslashishda yordam berish"
+      }
+    },
+    "mentors_title": "NASTAVNIKLAR ",
+    "mentor_dir": {
+      "title": "INTIZOM  ",
+      "win": "BU G'ALABA",
+      "quote": "Zallardagi tartib — bu fikrlardagi tartibdir. Biz shunchaki maktab emas, balki yetakchilar hamjamiyatini quryapmiz.",
+      "name": "Ivan Ivanov"
+    },
+    "mentor_dean": {
+      "title": "INTELLEKT ",
+      "win": "SIZNING QUROLINGIZ",
+      "quote": "Blue Zone'da har bir bayt ma'lumot sizni raqamli dunyoda ustunlikka yaqinlashtiradi.",
+      "name": "Anna Petrova"
+    }
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "admission": "Qabul",
+    "information": "Ma'lumot",
+    "students": "Talabalarga",
+    "application": "Ariza"
+  }
+}

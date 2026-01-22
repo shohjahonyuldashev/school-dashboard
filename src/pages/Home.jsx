@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import LogoLoop from "../components/Logoloop/LogoLoop";
 import { Shield, UserCircle, GraduationCap, Users2 } from "lucide-react";
-import ReactPlayer from "react-player";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 import {
   SiReact,
@@ -27,21 +28,37 @@ const techLogos = [
 ];
 
 const Home = () => {
+  const { t } = useTranslation();
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Задержка между появлением карточек
+      },
+    },
+  };
+
+  // Конфигурация анимации для каждой карточки
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <div className="font-sans ">
-      {/* Header с PixelBlast */}
-
       {/* Hero Section */}
       <section className="text-center py-20 ">
         <h1 className="text-5xl font-bold mb-4 text-blue-600">
-          Welcome to School 1
+          {t("home.hero.title")}
         </h1>
         <p className="text-xl mb-6 max-w-xl mx-auto text-blue-600">
-          Your journey to knowledge, growth, and success starts here.
+          {t("home.hero.subtitle")}
         </p>
         <Link to="/about">
           <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-            Learn More
+            {t("home.hero.button")}
           </button>
         </Link>
       </section>
@@ -49,12 +66,10 @@ const Home = () => {
       {/* About Section */}
       <section className="py-16 px-8 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">
-          About Our School
+          {t("home.about.title")}
         </h2>
         <p className="text-center max-w-3xl mx-auto text-blue-800">
-          School 1 provides high-quality education with a focus on personal
-          growth, creativity, and excellence. Our dedicated teachers and staff
-          work together to help every student succeed.
+          {t("home.about.text")}
         </p>
       </section>
       {/* Board of Directors */}
@@ -63,7 +78,10 @@ const Home = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-white">
-              НАШИ <span className="text-blue-500 italic">ПРОГРАММЫ</span>
+              {t("home.programs.title_parts1")}{" "}
+              <span className="text-blue-500 italic">
+                {t("home.programs.title_parts2")}
+              </span>
             </h2>
             <div className="h-1 w-24 bg-blue-600 mx-auto rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
           </div>
@@ -71,28 +89,28 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
               {
-                title: "Science",
-                desc: "Hands-on experiments and research for curious minds.",
+                title: t("home.programs.items.0.title"),
+                desc: t("home.programs.items.0.desc"),
               },
               {
-                title: "Arts",
-                desc: "Foster creativity through music, drawing, and theater.",
+                title: t("home.programs.items.1.title"),
+                desc: t("home.programs.items.1.desc"),
               },
               {
-                title: "Sports",
-                desc: "Develop teamwork, discipline, and healthy competition.",
+                title: t("home.programs.items.2.title"),
+                desc: t("home.programs.items.2.desc"),
               },
               {
-                title: "Technology / Coding",
-                desc: "Robotics, basic programming, web development.",
+                title: t("home.programs.items.3.title"),
+                desc: t("home.programs.items.3.desc"),
               },
               {
-                title: "Languages",
-                desc: "English club, debate and international communication.",
+                title: t("home.programs.items.4.title"),
+                desc: t("home.programs.items.4.desc"),
               },
               {
-                title: "Math Club",
-                desc: "Logical thinking, complex puzzles and competitions.",
+                title: t("home.programs.items.5.title"),
+                desc: t("home.programs.items.5.desc"),
               },
             ].map((item, index) => (
               <div
@@ -120,10 +138,13 @@ const Home = () => {
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-20 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">
-              School <span className="text-blue-500 italic">Organization</span>
+              {t("home.org.title_part1")}{" "}
+              <span className="text-blue-500 italic">
+                {t("home.org.title_part2")}
+              </span>
             </h2>
             <p className="text-gray-500 font-mono text-sm tracking-widest uppercase">
-              [ Operational Hierarchy // Status: Active ]
+              {t("home.org.status")}
             </p>
             <div className="h-1 w-20 bg-blue-600 mx-auto mt-6 rounded-full shadow-[0_0_15px_rgba(37,99,235,0.4)]"></div>
           </div>
@@ -133,14 +154,23 @@ const Home = () => {
               <div className="text-center bg-blue-600/5 p-6 border-b border-gray-900">
                 <div className="flex items-center justify-center gap-3 text-xl font-bold uppercase tracking-widest text-blue-500">
                   <Shield className="h-6 w-6" />
-                  Board of Directors
+                  {t("home.org.board_title")}
                 </div>
               </div>
               <div className="p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 {[
-                  { name: "Dr. Sarah Johnson", role: "Board Chairperson" },
-                  { name: "Michael Chen", role: "Vice Chairperson" },
-                  { name: "Emily Rodriguez", role: "Secretary" },
+                  {
+                    name: t("home.org.board_members.0.name"),
+                    role: t("home.org.board_members.0.role"),
+                  },
+                  {
+                    name: t("home.org.board_members.1.name"),
+                    role: t("home.org.board_members.1.role"),
+                  },
+                  {
+                    name: t("home.org.board_members.2.name"),
+                    role: t("home.org.board_members.2.role"),
+                  },
                 ].map((person, i) => (
                   <div key={i} className="space-y-3">
                     <UserCircle className="h-12 w-12 mx-auto text-gray-800 group-hover:text-blue-600 transition-colors duration-500" />
@@ -164,21 +194,21 @@ const Home = () => {
               <div className="text-center p-6 border-b border-gray-900 bg-blue-600/5">
                 <div className="flex items-center justify-center gap-3 text-lg font-bold uppercase tracking-widest">
                   <GraduationCap className="h-6 w-6 text-blue-500" />
-                  Principal
+                  {t("home.org.principal_label")}
                 </div>
               </div>
               <div className="p-10 text-center">
                 <div className="relative inline-block mb-6">
                   <UserCircle className="h-20 w-20 mx-auto text-blue-600 group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white text-[8px] px-2 py-1 rounded font-black tracking-tighter">
-                    LEADER
+                    {t("home.org.leader_tag")}
                   </div>
                 </div>
                 <p className="font-black text-2xl text-white uppercase tracking-tight">
-                  Dr. Robert Williams
+                  {t("home.org.principal_name")}
                 </p>
                 <p className="text-xs font-mono text-gray-500 mt-2 uppercase tracking-[0.2em]">
-                  Principal & Academic Director
+                  {t("home.org.principal_role")}
                 </p>
               </div>
             </div>
@@ -191,15 +221,27 @@ const Home = () => {
               <div className="text-center p-6 border-b border-gray-900 bg-white/[0.02]">
                 <div className="flex items-center justify-center gap-3 text-lg font-bold uppercase tracking-widest text-gray-400">
                   <Users2 className="h-6 w-6 text-blue-600" />
-                  Department Heads
+                  {t("home.org.dept_title")}
                 </div>
               </div>
               <div className="p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
                 {[
-                  { title: "Mathematics", name: "Prof. James Lee" },
-                  { title: "Sciences", name: "Dr. Lisa Anderson" },
-                  { title: "Languages", name: "Ms. Maria Garcia" },
-                  { title: "Arts & Sports", name: "Mr. David Brown" },
+                  {
+                    title: t("home.org.dept_heads.0.title"),
+                    name: t("home.org.dept_heads.0.name"),
+                  },
+                  {
+                    title: t("home.org.dept_heads.1.title"),
+                    name: t("home.org.dept_heads.1.name"),
+                  },
+                  {
+                    title: t("home.org.dept_heads.2.title"),
+                    name: t("home.org.dept_heads.2.name"),
+                  },
+                  {
+                    title: t("home.org.dept_heads.3.title"),
+                    name: t("home.org.dept_heads.3.name"),
+                  },
                 ].map((dept, idx) => (
                   <div
                     key={idx}
@@ -221,10 +263,22 @@ const Home = () => {
 
             <div className="pt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { role: "Counseling", count: "3 Counselors" },
-                { role: "Library", count: "2 Librarians" },
-                { role: "Administration", count: "5 Staff Members" },
-                { role: "Facilities", count: "4 Staff Members" },
+                {
+                  role: t("home.org.staff.0.role"),
+                  count: t("home.org.staff.0.count"),
+                },
+                {
+                  role: t("home.org.staff.1.role"),
+                  count: t("home.org.staff.1.count"),
+                },
+                {
+                  role: t("home.org.staff.2.role"),
+                  count: t("home.org.staff.2.count"),
+                },
+                {
+                  role: t("home.org.staff.3.role"),
+                  count: t("home.org.staff.3.count"),
+                },
               ].map((staff, idx) => (
                 <div
                   key={idx}
@@ -247,8 +301,8 @@ const Home = () => {
       <section className="py-24  border-t border-gray-900">
         <div className="max-w-9xl mx-auto ">
           <h2 className="text-2xl font-mono font-bold text-white text-center mb-12 tracking-widest uppercase">
-            [ <span className="text-blue-500">TECH_STACK</span> // SYSTEM_CORES
-            ]
+            [ <span className="text-blue-500">{t("home.tech.tech_stack")}</span>{" "}
+            // {t("home.tech.system_cores")} ]
           </h2>
 
           <div className="relative h-[120px] overflow-hidden border-y border-gray-900 bg-[#050505] flex items-center">
@@ -261,20 +315,22 @@ const Home = () => {
                 gap={80}
                 scaleOnHover={true}
                 fadeOut={true}
-                fadeOutColor="#000000" 
+                fadeOutColor="#000000"
                 ariaLabel="Technology partners"
               />
             </div>
           </div>
 
-          <p className="text-center text-[10px] font-mono text-gray-700 mt-6 tracking-[0.4em] uppercase">
+          <p className="text-center text-[10px] font-mono text-white mt-6 tracking-[0.4em] uppercase">
             Running on high-performance infrastructure
           </p>
         </div>
       </section>
 
       <section className="py-12 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6 text-blue-500">TEST VIDEO</h2>
+        <h2 className="text-3xl font-bold mb-6 text-blue-500">
+          {t("home.video.title")}
+        </h2>
 
         <div className="flex justify-center">
           <div className="w-full max-w-6xl aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
@@ -292,34 +348,49 @@ const Home = () => {
 
       {/* News & Events Section */}
       <section className="py-16 px-8 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-center text-[#0c45f0]">
-          News & Events
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="p-4 border rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="font-semibold mb-2 text-[#0c45f0]">
-              Science Fair 2025
-            </h3>
-            <p className="text-[#0c45f0]">
-              Our students showcase amazing projects in physics, chemistry, and
-              biology.
-            </p>
-          </div>
-          <div className="p-4 border rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="font-semibold mb-2 text-[#0c45f0]">
-              Art Exhibition
-            </h3>
-            <p className="text-[#0c45f0]">
-              Explore the creativity of our students in visual arts and design.
-            </p>
-          </div>
-          <div className="p-4 border rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="font-semibold mb-2 text-[#0c45f0]">Sports Day</h3>
-            <p className="text-[#0c45f0]">
-              Fun competitions and activities for students of all ages.
-            </p>
-          </div>
-        </div>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold mb-6 text-center text-[#0c45f0]"
+        >
+          {t("home.news.title")}
+        </motion.h2>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }} // Анимация сработает, когда 20% секции будет в зоне видимости
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          {[
+            {
+              title: t("home.news.items.0.title"),
+              desc: t("home.news.items.0.desc"),
+            },
+            {
+              title: t("home.news.items.1.title"),
+              desc: t("home.news.items.1.desc"),
+            },
+            {
+              title: t("home.news.items.2.title"),
+              desc: t("home.news.items.2.desc"),
+            },
+          ].map((event, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.03, translateY: -5 }} // Эффект при наведении
+              className="p-4 border rounded-lg shadow hover:shadow-xl transition-shadow duration-300 border-white/10 bg-[#1a1a1a]/40 backdrop-blur-sm"
+            >
+              <h3 className="font-semibold mb-2 text-[#0c45f0]">
+                {event.title}
+              </h3>
+              <p className="text-gray-400">{event.desc}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </section>
 
       {"Google map"}
@@ -329,8 +400,10 @@ const Home = () => {
           <div className="bg-zinc-900/50 border border-white/5 p-10 rounded-[40px] flex flex-col justify-between shadow-2xl">
             <div>
               <h2 className="text-3xl font-bold text-white uppercase mb-6 border-l-4 border-blue-600 pl-4 tracking-tighter">
-                Где мы{" "}
-                <span className="text-blue-600 text-xl block">Находимся</span>
+                {t("home.map.title_part1")}{" "}
+                <span className="text-blue-600 text-xl block">
+                  {t("home.map.title_part2")}
+                </span>
               </h2>
 
               <div className="space-y-8 mt-10">
@@ -339,11 +412,11 @@ const Home = () => {
                     📍
                   </div>
                   <div>
-                    <p className="text-white font-bold mb-1">Адрес штаба</p>
+                    <p className="text-white font-bold mb-1">
+                      {t("home.map.address_label")}
+                    </p>
                     <p className="text-zinc-500 text-sm leading-relaxed">
-                      г. Коканд, Ферганская область,
-                      <br />
-                      ул. Турон, дом 1
+                      {t("home.map.address_value")}
                     </p>
                   </div>
                 </div>
@@ -353,10 +426,12 @@ const Home = () => {
                     📞
                   </div>
                   <div>
-                    <p className="text-white font-bold mb-1">Контакты</p>
+                    <p className="text-white font-bold mb-1">
+                      {t("home.map.phone_label")}
+                    </p>
                     <p className="text-zinc-500 text-sm">+998 (95) 120-44-00</p>
                     <p className="text-zinc-600 text-xs mt-1 italic">
-                      Приемная работает с 08:00 до 20:00
+                      {t("home.map.working_hours")}
                     </p>
                   </div>
                 </div>
@@ -369,7 +444,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="mt-12 w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all shadow-lg shadow-blue-600/20 uppercase tracking-widest text-sm text-center block"
             >
-              Построить маршрут
+              {t("home.map.button")}
             </a>
           </div>
 
