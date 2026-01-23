@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next"; //
 
 const ApplicationPage = () => {
+  const { t } = useTranslation();
   // 1. ПАМЯТЬ ДЛЯ ЭКРАНА УСПЕХА
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -19,7 +21,7 @@ const ApplicationPage = () => {
     e.preventDefault();
 
     if (formData.age < 6 || formData.age > 19) {
-      alert("ОШИБКА: Недопустимый возраст для регистрации (6-19 лет).");
+      alert(t("lang.error_age"));
       return;
     }
 
@@ -46,7 +48,7 @@ const ApplicationPage = () => {
           message: "",
         });
       } else {
-        alert("Ошибка при отправке. Попробуйте еще раз.");
+        alert(t("lang.error_server"));
       }
     } catch (error) {
       console.error("Ошибка:", error);
@@ -60,10 +62,11 @@ const ApplicationPage = () => {
         <>
           <div className="text-center mb-12 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">
-              ПОДАТЬ <span className="text-blue-500">ЗАЯВКУ</span>
+              {t("lang.title_1")}{" "}
+              <span className="text-blue-500">{t("lang.title_2")}</span>
             </h1>
             <p className="text-gray-500 font-mono tracking-widest text-sm italic">
-              [ SYSTEM ACCESS REQUEST // STATUS: PENDING ]
+              {t("lang.status_pending")}
             </p>
           </div>
 
@@ -77,11 +80,11 @@ const ApplicationPage = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-xs font-mono text-gray-500 uppercase mb-2 ml-1">
-                  Parent_Full_Name
+                  {t("lang.parent_label")}
                 </label>
                 <input
                   type="text"
-                  placeholder="ФИО родителя"
+                  placeholder={t("lang.parent_placeholder")}
                   value={formData.parentName} // Добавлено для контроля
                   className="w-full bg-black border border-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:border-blue-500 transition-all text-white"
                   onChange={(e) =>
@@ -93,11 +96,11 @@ const ApplicationPage = () => {
 
               <div>
                 <label className="block text-xs font-mono text-gray-500 uppercase mb-2 ml-1">
-                  Student_Full_Name
+                  {t("lang.student_label")}
                 </label>
                 <input
                   type="text"
-                  placeholder="ФИО ученика"
+                  placeholder={t("lang.student_placeholder")}
                   value={formData.studentName}
                   className="w-full bg-black border border-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:border-blue-500 transition-all text-white"
                   onChange={(e) =>
@@ -110,7 +113,7 @@ const ApplicationPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input
                   type="email"
-                  placeholder="Contact_Email"
+                  placeholder={t("lang.email_placeholder")}
                   value={formData.email}
                   className="w-full bg-black border border-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:border-blue-500 transition-all text-white"
                   onChange={(e) =>
@@ -135,7 +138,7 @@ const ApplicationPage = () => {
               <div className="grid grid-cols-2 gap-6">
                 <input
                   type="number"
-                  placeholder="Возраст (6-19)"
+                  placeholder={t("lang.age_placeholder")}
                   value={formData.age}
                   className="w-full bg-black border border-gray-800 rounded-xl px-4 py-4 focus:outline-none focus:border-blue-500 transition-all text-white"
                   onChange={(e) =>
@@ -151,10 +154,10 @@ const ApplicationPage = () => {
                   }
                   required
                 >
-                  <option value="">Класс...</option>
+                  <option value="">{t("lang.grade_placeholder")}</option>
                   {[...Array(11)].map((_, i) => (
                     <option key={i + 1} value={i + 1}>
-                      {i + 1} класс
+                      {i + 1} {t("lang.grade_label")}
                     </option>
                   ))}
                 </select>
@@ -168,7 +171,7 @@ const ApplicationPage = () => {
                     : "bg-blue-600 shadow-blue-900/20"
                 }`}
               >
-                ОТПРАВИТЬ ЗАПРОС
+                {t("lang.submit_btn")}
               </button>
             </form>
           </div>
@@ -179,22 +182,25 @@ const ApplicationPage = () => {
             <span className="text-4xl">✓</span>
           </div>
           <h2 className="text-5xl font-black text-blue-500 uppercase tracking-tighter mb-2">
-            ACCESS GRANTED
+            {t("lang.success_title")}
           </h2>
           <div className="font-mono text-gray-500 text-sm overflow-hidden whitespace-nowrap border-r-2 border-blue-500 animate-typing">
-            Заявка {formData.studentName.split(" ")[0]} принята. Ждите связи...
+            {t("lang.success_msg").replace(
+              "{{name}}",
+              formData.studentName.split(" ")[0],
+            )}
           </div>
           <button
             onClick={() => setIsSubmitted(false)}
             className="mt-10 text-xs font-mono text-gray-600 hover:text-white transition-colors"
           >
-            [ ОТПРАВИТЬ ЕЩЕ ОДИН ЗАПРОС ]
+            {t("lang.reset_btn")}
           </button>
         </div>
       )}
 
       <p className="mt-8 text-gray-600 text-[10px] font-mono uppercase tracking-widest text-center">
-        Security protocols: ACTIVE // Encrypted by Shohjahon
+        {t("lang.security_footer")}
       </p>
 
       <style>{`

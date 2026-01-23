@@ -141,10 +141,10 @@
       }
     },
     "story": {
-      "since": "Since 1993",
-      "title": "Our Story",
-      "found": "Founded in",
-      "number": "1993",
+      "since": "Since 1993 ",
+      "title": "Our Story ",
+      "found": "Founded in ",
+      "number": " 1993  ",
       "desc": " Excellence Academy began with a powerful vision to redefine learning.",
       "growth": "Over the past three decades, we have grown. ",
       "team_title": "1,200 learners"
@@ -604,5 +604,25 @@
     "information": "Information",
     "students": "Students",
     "application": "Application"
+  },
+  "lang": {
+    "title_1": "SUBMIT",
+    "title_2": "APPLICATION",
+    "status_pending": "[ SYSTEM ACCESS REQUEST // STATUS: PENDING ]",
+    "parent_label": "Parent_Full_Name",
+    "parent_placeholder": "Parent Full Name",
+    "student_label": "Student_Full_Name",
+    "student_placeholder": "Student Full Name",
+    "email_placeholder": "Contact_Email",
+    "age_placeholder": "Age (6-19)",
+    "grade_placeholder": "Grade...",
+    "grade_label": "grade",
+    "submit_btn": "SEND REQUEST",
+    "success_title": "ACCESS GRANTED",
+    "success_msg": "Application for {{name}} accepted. Stand by...",
+    "reset_btn": "[ SEND ANOTHER REQUEST ]",
+    "error_age": "ERROR: Invalid age for registration (6-19 years).",
+    "error_server": "Transmission error. Please try again.",
+    "security_footer": "Security protocols: ACTIVE // Encrypted by Shohjahon"
   }
 }

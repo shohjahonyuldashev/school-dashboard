@@ -141,10 +141,10 @@
       }
     },
     "story": {
-      "since": "1993-yildan beri",
-      "title": "Bizning tariximiz",
-      "found": "Asos solingan yil",
-      "number": "1993",
+      "since": "1993-yildan beri ",
+      "title": "Bizning tariximiz ",
+      "found": "Asos solingan yil ",
+      "number": " 1993 ",
       "desc": "Mukammallik Akademiyasi o'qitish tizimini qayta belgilash haqidagi kuchli tasavvur bilan o'z faoliyatini boshlagan.",
       "growth": "O'tgan o'ttiz yil ichida bizning o'quvchilarimiz soni. ",
       "team_title": "1,200 o'quvchilar yetdi"
@@ -589,5 +589,25 @@
     "information": "Ma'lumot",
     "students": "Talabalarga",
     "application": "Ariza"
+  },
+  "lang": {
+    "title_1": "ARIZA",
+    "title_2": "TOPSHIRISH",
+    "status_pending": "[ TIZIM SO'ROVI // STATUS: KUTILMOQDA ]",
+    "parent_label": "Ota_Ona_Ismi",
+    "parent_placeholder": "Ota-onaning F.I.SH",
+    "student_label": "O'quvchi_Ismi",
+    "student_placeholder": "O'quvchining F.I.SH",
+    "email_placeholder": "Aloqa_Emaili",
+    "age_placeholder": "Yoshi (6-19)",
+    "grade_placeholder": "Sinf...",
+    "grade_label": "sinf",
+    "submit_btn": "SO'ROVNI YUBORISH",
+    "success_title": "RUXSAT BERILDI",
+    "success_msg": "{{name}} uchun ariza qabul qilindi. Aloqani kuting...",
+    "reset_btn": "[ YANA BITTA SO'ROV YUBORISH ]",
+    "error_age": "XATO: Ro'yxatdan o'tish uchun noto'g'ri yosh (6-19 yosh).",
+    "error_server": "Yuborishda xatolik. Qaytadan urinib ko'ring.",
+    "security_footer": "Security protocols: ACTIVE // Encrypted by Shohjahon"
   }
 }
