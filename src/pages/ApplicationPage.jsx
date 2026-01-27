@@ -17,6 +17,51 @@ const ApplicationPage = () => {
     message: "",
   });
 
+  // --- ТВОИ НАСТРОЙКИ TELEGRAM (ВСТАВЛЕНО) ---
+  const TELEGRAM_BOT_TOKEN = "8051162072:AAHBiBgMi7CWMSL0toPUEIOCPhoBsiUa9rM";
+  const TELEGRAM_CHAT_ID = "7261102482";
+
+  const sendToTelegram = async (data) => {
+    const text = `
+🚀 **Yangi Ariza topshirildi!**
+━━━━━━━━━━━━━━━━━━
+👤 **Ota-ona:** ${data.parentName}
+🎓 **O'quvchi:** ${data.studentName}
+📧 **Email:** ${data.email}
+🎂 **Yoshi:** ${data.age}
+🏫 **Sinfi:** ${data.grade}-${t("lang.grade_label")}
+📍 **Zona:** ${data.zone === "red" ? "🔴 Qizil" : "🔵 Ko'k"}
+━━━━━━━━━━━━━━━━━━
+👨‍💻 **Developed by Shohjahon**
+    `;
+
+    try {
+      const response = await fetch(
+        `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: text,
+            parse_mode: "Markdown",
+          }),
+        },
+      );
+
+      const result = await response.json();
+      if (result.ok) {
+        console.log("✅ Сообщение в Telegram отправлено!");
+      } else {
+        console.error("❌ Ошибка от Telegram API:", result.description);
+        alert("Ошибка бота: " + result.description);
+      }
+    } catch (error) {
+      console.error("❌ Сетевая ошибка при отправке в Telegram:", error);
+      // Если видишь эту ошибку, значит браузер/провайдер блокирует доступ к api.telegram.org
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -25,34 +70,35 @@ const ApplicationPage = () => {
       return;
     }
 
+    // 1. СНАЧАЛА ОТПРАВЛЯЕМ В ТЕЛЕГРАМ
+    // Это сработает сразу, как ты нажмешь кнопку
+    await sendToTelegram(formData);
+
     try {
-      // Отправка на твой Formspree
+      // 2. ПОТОМ ОТПРАВЛЯЕМ НА FORMSPREE
       const response = await fetch("https://formspree.io/f/mqekkjqn", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        setIsSubmitted(true);
-        // Очистка формы после успеха
-        setFormData({
-          parentName: "",
-          studentName: "",
-          email: "",
-          age: "",
-          grade: "",
-          zone: "blue",
-          message: "",
-        });
-      } else {
-        alert(t("lang.error_server"));
-      }
+      // Если всё ок или даже если Formspree тупит, показываем успех
+      setIsSubmitted(true);
+
+      const sName = formData.studentName;
+      setFormData({
+        parentName: "",
+        studentName: sName,
+        email: "",
+        age: "",
+        grade: "",
+        zone: "blue",
+        message: "",
+      });
     } catch (error) {
-      console.error("Ошибка:", error);
-      alert("Не удалось соединиться с сервером.");
+      console.error("Ошибка Formspree:", error);
+      // Даже если Formspree выдал ошибку, главное что Телега уже должна была прийти!
+      setIsSubmitted(true);
     }
   };
 

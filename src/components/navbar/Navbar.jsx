@@ -16,6 +16,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: t("nav.home"), path: "/" },
+    { name: t("nav.news"), path: "/news" }, // <--- ДОБАВЛЕНО: Теперь "Новости" будут вторыми в списке
     { name: t("nav.about"), path: "/about" },
     { name: t("nav.admission"), path: "/admission" },
     { name: t("nav.information"), path: "/information" },
@@ -53,7 +54,7 @@ const Navbar = () => {
 
           {/* Языки для ПК */}
           <div className="flex gap-4 text-white font-bold ml-4 border-l border-white/20 pl-4">
-            {['uz', 'ru', 'en'].map((lng) => (
+            {["uz", "ru", "en"].map((lng) => (
               <button
                 key={lng}
                 onClick={() => changeLanguage(lng)}
@@ -80,7 +81,9 @@ const Navbar = () => {
       {/* --- МОБИЛЬНОЕ МЕНЮ (Overlay) --- */}
       <div
         className={`fixed inset-0 z-[999] bg-[#0a0a0a] flex flex-col items-center justify-center transition-all duration-500 md:hidden ${
-          isOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-full opacity-0 invisible"
+          isOpen
+            ? "translate-y-0 opacity-100 visible"
+            : "-translate-y-full opacity-0 invisible"
         }`}
       >
         <ul className="flex flex-col space-y-8 text-center">
@@ -99,7 +102,7 @@ const Navbar = () => {
 
         {/* Языки для мобилки */}
         <div className="flex gap-8 text-white font-bold mt-12 text-xl border-t border-white/10 pt-8 w-full justify-center">
-          {['uz', 'ru', 'en'].map((lng) => (
+          {["uz", "ru", "en"].map((lng) => (
             <button
               key={lng}
               onClick={() => changeLanguage(lng)}

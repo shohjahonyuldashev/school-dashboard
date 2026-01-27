@@ -6,6 +6,7 @@ import Admission from "./pages/Admission";
 import Information from "./pages/Information";
 import Students from "./pages/Students";
 import ApplicationPage from "./pages/ApplicationPage";
+import NewsPage from "./pages/NewsPage";
 
 const App = () => {
   const routes = createBrowserRouter([
@@ -16,6 +17,10 @@ const App = () => {
         {
           index: true, //
           element: <Home />,
+        },
+        {
+          path: "news", // 2. ДОБАВЛЯЕМ ПУТЬ ДЛЯ НОВОСТЕЙ
+          element: <NewsPage />,
         },
         {
           path: "about",
