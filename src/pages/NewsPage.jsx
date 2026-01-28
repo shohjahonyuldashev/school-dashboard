@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
+import Footer from "../components/footer/Footer";
 
 const NewsPage = () => {
   const [news, setNews] = useState([]);
@@ -96,13 +97,14 @@ const NewsPage = () => {
       </div>
 
       {/* Industrial Footer */}
-      <footer className="mt-64 text-center">
+      <footer className="mt-64 mb-64 text-center">
         <div className="inline-block px-8 py-4 border border-white/5 bg-white/[0.02] backdrop-blur-md">
-          <p className="font-mono text-[19px] text-white uppercase tracking-[0.8em]">
+          <p className="font-bold  text-[19px] text-white uppercase tracking-[0.8em]">
             End of News Stream // Shohjahon Dev
           </p>
         </div>
       </footer>
+      <Footer />
     </div>
   );
 };

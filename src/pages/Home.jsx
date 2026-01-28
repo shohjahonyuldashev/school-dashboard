@@ -336,8 +336,8 @@ const Home = () => {
           <div className="w-full max-w-6xl aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/jfKfPfyJRdk"
-              title="YouTube video test"
+              src="https://www.youtube.com/embed/yCNUP2NAt-A" 
+              title="YouTube video presentation"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

@@ -34,7 +34,7 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-[1000] bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10 px-6 md:px-12 py-5 flex justify-between items-center shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
         {/* Логотип */}
         <h1 className="text-2xl md:text-3xl font-black italic tracking-tighter text-white z-[1001]">
-          SCHOOL{" "}
+          EduKokand{" "}
           <span className="text-[#00f2ff] drop-shadow-[0_0_10px_rgba(0,242,255,0.7)]">
             1
           </span>
